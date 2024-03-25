@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nethub - profile</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="all.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.png">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <!-- main container start -->
+    <div class="main_container">
+        <!-- Load content from include.html -->
+        <div class="includedContent"></div>
+        <!-- Profile section start -->
+        <section class="profile_section">
+                <div class="upload_image">
+                    <img id="image_preview" src="#" alt="Preview">
+                    <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <input type="file" id="profileUpload" name="profileUpload" style="display: none;" accept="image/*">
+                        <button type="submit" name="profileUploadBtn" id="profileUploadBtn">Upload</button>
+                    </form>
+                </div>
+                <!-- Edit profile -->
+                <div class="content" id="edit_profile" style="display: none;">
+                    <form action="update.php" method="post">
+                        <div class="edit_title">
+                            <div class="title">
+                                <i class="fas fa-close" id="close_edit"></i>
+                                <h1>Edit profile</h1>
+                            </div>
+                            <button type="submit" name="save_profile" id="save" class="btn btn-primary p-0 px-2">Save</button>
+                        </div>
+                        <div class="row">
+                            <div class="edit_form">
+                                <span>Username</span>
+                                <input type="text" class="text-lowercase" id="username" name="username" value='<?php echo "$username"; ?>'>
+                            </div>
+                            <div class="edit_form">
+                                <span>Firstname</span>
+                                <input type="text" id="firstname" name="firstname" value='<?php echo "$firstname"; ?>'>
+                            </div>
+                            <div class="edit_form">
+                                <span>Lastname</span>
+                                <input type="text" id="lastname" name="lastname" value='<?php echo "$lastname"; ?>'>
+                            </div>
+                            <div class="edit_form">
+                                <span>Nickname</span>
+                                <input type="text" id="nickname" name="nickname" value='<?php echo "$nickname"; ?>'>
+                            </div>
+                            <div class="edit_form">
+                                <span>Birthday</span>
+                                <input type="date" id="birthday" name="birthday" value='<?php echo "$birthday"; ?>'>
+                            </div>
+                            <div class="edit_form">
+                                <span>Email</span>
+                                <input type="email" id="email" name="email" value='<?php echo "$email" ?>'>
+                            </div>
+                            <div class="edit_form">
+                                <span>Phone number</span>
+                                <input type="tel" id="phone_number" name="phone_number" value='<?php echo "$phone_number" ?>'>
+                            </div>
+                            <div class="edit_form">
+                                <span>Bio</span>
+                                <textarea name="bio" id="bio" rows="5"><?php echo "$bio"; ?></textarea>
+                            </div>
+                            <div class="edit_form">
+                                <span>Country</span>
+                                <input type="text" name="country" id="country" value='<?php echo "$country"; ?>'>
+                            </div>
+                            <div class="edit_form">
+                                <span>State</span>
+                                <input type="text" name="state" id="state" value='<?php echo "$state"; ?>'>
+                            </div>
+                            <div class="edit_form">
+                                <span>City</span>
+                                <input type="text" name="city" id="city" value='<?php echo "$city"; ?>'>
+                            </div>
+                            <div class="edit_form">
+                                <span>Profession</span>
+                                <input type="text" id="profession" name="profession" value='<?php echo "$profession"; ?>'>
+                            </div>
+                            <div class="edit_form">
+                                <span>Relationship</span>
+                                <input type="text" id="relationship" name="relationship" value='<?php echo "$relationship"; ?>'>
+                            </div>
+                            <div class="edit_form">
+                                <span>Website</span>
+                                <input type="text" id="website" name="website" value='<?php echo "$website"; ?>'>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Content start-->
+                <div class="content" id="profile">
+                    <div class="profile">
+                        <img src="<?php echo !empty($cover_photo) ? $cover_photo : 'https://picsum.photos/640/360'; ?>" alt="Cover photo" id="cover_photo">
+                        <i class="fas fa-camera icon" id="cover"></i>
+                        <div class="upload_cover">
+                            <p>Take photo</p>
+                            <p id="add_cover">Upload cover</p>
+                        </div>
+
+                        <img src="<?php echo !empty($profile_photo) ? $profile_photo : 'https://eu.ui-avatars.com/api/?name=' . urlencode("$firstname $lastname") . '&size=250'; ?>" alt="Profile photo" id="profile_photo">
+                        <div class="upload_photo">
+                            <p>Take photo</p>
+                            <p id="add_photo">Upload photo</p>
+                        </div>
+                        <i class="fas fa-camera icon" id="photo"></i>
+                    </div>
+                    <div class="box">
+                        <!-- <i class="fas fa-search"></i>
+                        <i class="fas fa-bell"></i>
+                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-ellipsis-vertical"></i> -->
+
+                        <!-- Button edit profile -->
+                        <button type="button" class="btn btn-primary p-1 px-2" id="edit_btn">Edit profile</button>
+                    </div>
+
+                    <div class="info">
+                        <h1 id="name"><small></small></h1>
+                        <p class="text-lowercase" id="username"></p>
+                        <div class="people">
+                            <span id="followers"><p>Followers</p></span>
+                            <span id="following"><p>Following</p></span>
+
+                            <!-- <span id="follow">Follow</span> -->
+                        </div>
+                        <p id='bio'></p>
+                        <i id='career' class='fas fa-briefcase'><span></span></i>
+                        
+                        <i id='career' class='fas fa-location-dot'><span></span></i>
+                        
+                        <i id='career' class='fas fa-heart'><span></span></i>
+                        
+                        <i id='career' class='fas fa-link'><a href='$website'></a></i>
+                        
+                        <i id='career' class='fas fa-cake-candles'><span></span></i>
+                        
+                        <i id='career' class='fas fa-calendar'><span></span></i>
+                    </div>
+                    <div class="row">
+                        <p class="col text-center p-2">Posts</p>
+                        <p class="col text-center p-2">Photos</p>
+                        <p class="col text-center p-2">Videos</p>
+                    </div>
+                    
+                    <!-- <?php foreach ($posts_data as $post): ?>
+                    <div class="post">
+                        <div class="top">
+                            <div class="profile_box">
+                                <img src="<?php echo !empty($profile_photo) ? $profile_photo : 'https://eu.ui-avatars.com/api/?name=' . urlencode("$firstname $lastname") . '&size=250'; ?>" alt="Profile">
+                                <span><?php echo "$firstname $lastname"; ?></span>
+                                <p>- <?php echo "$time_ago"; ?></p>
+                            </div>
+                            <span class="fas fa-ellipsis"></span>
+                        </div>
+                        <div class="info">
+                            <p><?php echo $post['description']; ?></p>
+                        </div>
+                        <?php if (!empty($post['image'])): ?>
+                            <div class="image">
+                                <img src="<?php echo $post['image']; ?>" alt="Post">
+                            </div>
+                        <?php elseif (!empty($post['video'])): ?>
+                            <div class="video">
+                                <video width="100%" height="400px" controls>
+                                    <source src="<?php echo $post['video']; ?>" type="video/mp4">
+                                    Your browser does not support this video tag.
+                                </video>
+                            </div>
+                        <?php endif; ?>
+                        <div class="row">
+                            <span class="fas fa-heart">
+                                <small><?php echo count($loves_data); ?></small>
+                            </span>
+                            <span class="fas fa-comment">
+                                <small><?php echo count($comments_data); ?></small>
+                            </span>
+                            <span class="fas fa-share-alt">
+                                <small><?php echo count($shares_data); ?></small>
+                            </span>
+                            <span class="fas fa-bookmark">
+                                <small><?php echo count($bookmarks_data); ?></small>
+                            </span>
+                        </div>
+                    </div>
+                   <?php endforeach; ?> -->
+                </div>
+                <!-- Content end -->
+                <!-- Suggestion start -->
+                <div class="suggestion">
+                    <h1 class="mb-3 fs-5">Suggested</h1>
+                    <div class="suggested">
+                        <div class="info">
+                            <div class="box">
+                                <img src="img/footwear6.jpg" alt="" class="profile_pics me-2">
+                                <p class="text-truncate">johndoe22</p>
+                            </div>
+                            <button class="btn btn-primary px-2">Follow</button>
+                        </div>
+                        <div class="info">
+                            <div class="box">
+                                <img src="img/malewallet.jpeg" alt="" class="profile_pics me-2">
+                                <p class="text-truncate">johndoe22</p>
+                            </div>
+                            <button class="btn btn-primary px-2">Follow</button>
+                        </div>
+                        <div class="info">
+                            <div class="box">
+                                <img src="img/footwear6.jpg" alt="" class="profile_pics me-2">
+                                <p class="text-truncate">johndoe22</p>
+                            </div>
+                            <button class="btn btn-primary px-2">Follow</button>
+                        </div>
+                        <div class="info">
+                            <div class="box">
+                                <img src="img/malewallet.jpeg" alt="" class="profile_pics me-2">
+                                <p class="text-truncate">johndoe22</p>
+                            </div>
+                            <button class="btn btn-primary px-2">Follow</button>
+                        </div>
+                        <div class="info">
+                            <div class="box">
+                                <img src="img/footwear6.jpg" alt="" class="profile_pics me-2">
+                                <p class="text-truncate">johndoe22</p>
+                            </div>
+                            <button class="btn btn-primary px-2">Follow</button>
+                        </div>
+                        <div class="info">
+                            <div class="box">
+                                <img src="img/malewallet.jpeg" alt="" class="profile_pics me-2">
+                                <p class="text-truncate">johndoe22</p>
+                            </div>
+                            <button class="btn btn-primary px-2">Follow</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- suggestion end -->
+        </section>
+        <!-- Profile section end -->
+    </div>
+    <!-- main container end -->
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Jquery all -->
+<script src="js/script.js"></script>
+
+<!-- Jquery profile -->
+<script src="js/profile.js"></script>
+</body>
+</html>

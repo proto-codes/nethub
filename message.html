@@ -1,0 +1,129 @@
+<?php
+require_once "fetch.php";
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nethub - message</title>
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="all.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.png">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/message.css">
+</head>
+<body>
+    <!-- main container start -->
+    <div class="main_container">
+        <!-- Load content from include.html -->
+        <div class="includedContent"></div>
+        <!-- Message section start -->
+        <section class="message_section">
+                <!-- Message list start-->
+                <div class="message_list">
+                    <div class="messageHeader">
+                        <div class="info">
+                            <img class="profile_pics" src="<?php echo !empty($profile_photo) ? $profile_photo : 'https://eu.ui-avatars.com/api/?name=' . urlencode("$firstname $lastname") . '&size=250'; ?>" alt="Profile photo" title="Profile">
+                            <h1>Chats</h1>
+                        </div>
+                        <div class="icons">
+                            <i class="fas fa-search icon" title="Search"></i>
+                            <i class="fas fa-comment-dots icon" title="Requests"></i>
+                            <i class="fas fa-archive icon" title="Archive"></i>
+                            <i class="fas fa-ellipsis-vertical icon" title="More"></i>
+                        </div>
+                    </div>
+                    <div class="scrollbox">
+                        <div class="row">
+                            <h1 class="col text-center p-2">Chats</h1>
+                            <h1 class="col text-center p-2">Groups</h1>
+                            <h1 class="col text-center p-2">Calls</h1>
+                        </div>
+                        <!-- Messages -->
+                        <div class="message">
+                            <img class="profile_pics" src="img/footwear6.jpg" alt="">
+                            <div class="user">
+                                <div class="box">
+                                    <h1 class="text-truncate" style="max-width: 18vw;">John Doe</h1>
+                                    <p class="text-truncate" style="max-width: 18vw;"><i class="fas fa-check-double"></i> Hello! how are you doing today, hope you got home safely?</p>
+                                </div>
+                                <div class="status">
+                                    <p id="date">Today</p>
+                                    <p id="new">1</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="fas fa-edit" id="new_chat" title="New chat"></i>
+                </div>
+                <!-- Content start -->
+                <div class="content">
+                    <div class="messageHeader">
+                        <div class="info">
+                            <i class="fas fa-arrow-left icon exitMsg"></i>
+                            <img class="profile_pics" src="img/footwear6.jpg" alt="" title="Profile">
+                            <div class="container">
+                                <h1 id="name" class="text-truncate">John Doe</h1>
+                                <p id="active_status">Online</p>
+                            </div>
+                        </div>
+                        <div class="icons">
+                            <i class="fas fa-phone icon" title="Voice call"></i>
+                            <i class="fas fa-video icon" title="Video call"></i> 
+                            <i class="fas fa-ellipsis-vertical icon" title="More"></i>
+                        </div>
+                    </div>
+                    <div class="chats">
+                        <div class="intro">
+                            <img class="profile_pics" src="img/footwear6.jpg" alt="">
+                            <h1 id="name">John Doe</h1>
+                            <p id="username">@johndoe22</p>
+                            <p id="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, dicta.</p>
+                            <p id="joined">Joined may 2014 - <span id="followers">328k Followers</span></p>
+                        </div>
+                        <div class="userMsgBox">
+                            <p class="user_msg">Hello!!!</p>
+                        </div>
+                        <div class="FriendMsgBox">
+                            <p class="friend_msg">Hi!.</p>
+                        </div>
+                    </div>
+                    <div class="message_box d-flex align-items-end">
+                        <i class="fas fa-smile ms-2 icon"></i>
+                        <i class="fas fa-plus mx-2 icon"></i>
+                        <form action="" method="post" class="flex-grow-1 d-flex align-items-end">
+                            <textarea placeholder="Type your message..." id="message_bar" rows="1" class="mr-2"></textarea>
+                            <button type="submit" id="send_message" class="mx-2"><i class="fas fa-paper-plane icon"></i></button>
+                        </form>
+                        <i id="voice_note" class="fas fa-microphone mx-2 icon"></i>
+                    </div>
+                </div>
+                <!-- Content end -->
+        </section>
+        <!-- Message section end -->
+    </div>
+    <!-- main container end -->
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Jquery all -->
+<script src="js/script.js"></script>
+
+<!-- Jquery message -->
+<script src="js/message.js"></script>
+</body>
+</html>

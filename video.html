@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super app - video</title>
+    <link rel="stylesheet" href="main/css/video.css">
+    <link rel="stylesheet" href="main/css/style.css">
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <!-- Page reloader -->
+    <div class="load">
+        <span class="fas fa-spinner fa-spin-pulse"></span>
+    </div>
+    <!-- Page reloader end -->
+    <!-- main container start -->
+    <div class="main_container">
+        <!-- Header start -->
+        <header>
+            <div class="site_name">
+                <a href="#" title="Logo" id="logo"><i class="fab fa-font-awesome-flag"></i><span> Logo</span></a>
+            </div>
+            <div class="search_bar">
+                <form action="" method="get">
+                <span class="fas fa-search"></span>
+                <input type="search" placeholder="Search..." id="search_bar">
+                </form>
+            </div>
+            <div class="header_icon">
+                <span title="Search" class="fas fa-search" id="search"></span>
+                <span title="Notifications" class="fas fa-bell" id="notifications"></span>
+                <span title="Menu" class="fas fa-bars" id="menu"></span>
+            </div>
+        </header>
+        <!-- Header end -->
+        <!-- nav start -->
+        <nav>
+            <a href="index.php" title="Logo" id="logo"><i class="fab fa-font-awesome-flag"></i><span> Logo</span></a>
+
+            <div class="links">
+                <a href="profile.php" title="Profile"><i class="fas fa-user"></i><span> Profile</span></a>
+                <a href="index.php" title="Home"><i class="fas fa-home"></i><span> Home</span></a>
+                <a href="#" title="Search" class="hidden" id="search"><i class="fas fa-search"></i><span> Search</span></a>
+                <a href="#" title="Create" class="hidden" id="create"><i class="fas fa-square-plus"></i><span> Create</span></a>
+                <a href="#" title="Friends"><i class="fas fa-users"></i><span> Friends</span></a>
+                <a href="message.php" title="Messages"><i class="fas fa-envelope"></i><span> Messages</span></a>
+                <a href="#" title="Notifications" class="hidden" id="notifications"><i class="fas fa-bell"></i><span> Notifications</span></a>
+                <a href="video.php" title="Video"><i class="fas fa-video"></i><span> Video</span></a>
+                <a href="#" title="Music"><i class="fas fa-music"></i><span> Music</span></a>
+                <a href="#" title="Book"><i class="fas fa-book"></i><span> Book</span></a>
+                <a href="#" title="News"><i class="fas fa-newspaper"></i><span> News</span></a>
+                <a href="#" title="Game"><i class="fas fa-gamepad"></i><span> Game</span></a>
+                <a href="#" title="Bank"><i class="fas fa-university"></i><span> Bank</span></a>
+                <a href="#" title="Shop"><i class="fas fa-shopping-cart"></i><span> Shop</span></a>
+                <a href="#" title="Bookmark"><i class="fas fa-bookmark"></i><span> Bookmark</span></a>
+            </div>
+
+            <a href="#" title="Menu" id="menu"><i class="fas fa-bars"></i><span> Menu</span></a>
+        </nav>
+        <!-- Nav end -->
+        <!-- Aside start -->
+        <aside class="search_pop">
+            <form action="" method="post">
+                <i class="fas fa-arrow-left" id="back"></i>
+                <i class="fas fa-search" id="icon"></i>
+                <input type="search" placeholder="Search..." id="search_input">
+            </form>
+            <div class="recent_result">
+                <div class="box">
+                    <p id="recent">Recent</p>
+                    <p id="clear_all">Clear all</p>
+                </div>
+                <div class="recent_search">
+                    <div class="user">
+                        <img src="img/femalehat.jpeg" alt="">
+                        <div class="description">
+                           <h3 id="name">Mike drake</h3>
+                           <p id="username">@mikedrake</p>
+                        </div>
+                    </div>
+                    <span class="fas fa-close"></span>
+                </div>
+            </div>
+            <div class="search_result"></div>
+        </aside>
+        <aside class="notifications_pop">
+            <div class="notifications">
+                <h1>Notifications</h1>
+                <span class="fas fa-cog"></span>
+            </div><br>
+            <div class="none">
+                <p>No notifications yet</p>
+            </div>
+            <div class="new">
+                <p>New</p>
+                <div class="my_notification">
+                    <div class="box">
+                        <div class="image"><img src="img/femalehat.jpeg" alt=""></div>
+                        <div class="description">
+                           <h3 id="people">Mike drake</h3>
+                           <p id="info">Commented on your photo and also sent you a message</p>
+                           <p id="date">2 hours ago</p>
+                        </div>
+                    </div>
+                    <span class="fas fa-ellipsis"></span>
+                    <div class="ellipsis">
+                        <div class="remove">
+                            <span class="fas fa-remove"></span>
+                            <p>Remove this notification</p>
+                        </div>
+                    </div>
+                </div>
+                
+            <div class="my_notification">
+                <div class="box">
+                    <div class="image"><img src="img/malewallet.jpeg" alt=""></div>
+                    <div class="description">
+                       <h3 id="people">Ken sandra</h3>
+                       <p id="info">Posted a new photo</p>
+                       <p id="date">5 mintues ago</p>
+                    </div>
+                </div>
+                <span class="fas fa-ellipsis"></span>
+                <div class="ellipsis">
+                    <div class="remove">
+                        <span class="fas fa-remove"></span>
+                        <p>Remove this notification</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </aside>
+        <aside class="menu_pop">
+            <h1>Menu</h1>
+            <div class="tabs">
+            </div>
+            <div id="see_tabs">
+                <h3 id="change_text">See tabs</h3>
+            </div>
+            <div class="mode">
+                <div id="display">
+                    <p>Dark/Light Mode</p>
+                    <span class="fas fa-caret-down" id="caret_down"></span>
+                    <span class="fas fa-caret-up" id="caret_up"></span>
+                </div>
+                <div id="mode_display">
+                    <label for="default">
+                        <input type="radio" name="default" id="default" checked> Default
+                    </label><br>
+                    <label for="dark_mode">
+                        <input type="radio" name="dark_mode" id="dark_mode"> Dark mode
+                    </label><br>
+                    <label for="light_mode">
+                        <input type="radio" name="light_mode" id="light_mode"> Light mode
+                    </label>
+                </div>
+            </div>
+            <div class="settings">
+                <h3>Settings</h3>
+            </div>
+            <form action="logout.php" method="post">
+                <button type="submit" name="logout">Logout</button>
+            </form>
+        </aside>
+        <aside class="create_pop">
+            <div class="create" id="post">
+                <span class="fas fa-pen-to-square"></span>
+                <h3>Post</h3>
+            </div>
+            <div class="create" id="moments">
+                <span class="fas fa-clock"></span>
+                <h3>Moments</h3>
+            </div>
+            <div class="create" id="live">
+                <span class="fas fa-video"></span>
+                <h3>Go live</h3>
+            </div>
+        </aside>
+        <!-- Aside end -->
+        <!-- Main content start-->
+        <div class="main_content">
+            <!-- video section start -->
+            <section class="video_section">
+                <div class="select">
+                    <button>Long</button>
+                    <button>Short</button>
+                </div>
+                <!-- Content start -->
+                <div class="content">
+                    <div class="post">
+                        <div class="top">
+                            <div class="profile">
+                                <img src="img/femalehat.jpeg" alt="Profile">
+                                <span>Mike Drake</span>
+                                <p>- 1h</p>
+                            </div>
+                            <span class="fas fa-ellipsis"></span>
+                        </div>
+                        <div class="info">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="video">
+                            <video controls>
+                                <source src="video/10 SECONDS VIDEO CLIP.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="row">
+                            <span class="fas fa-heart">
+                                <small>10</small>
+                            </span>
+                            <span class="fas fa-comment">
+                                <small>20k</small>
+                            </span>
+                            <span class="fas fa-share-alt">
+                                <small>3</small>
+                            </span>
+                            <span class="fas fa-bookmark">
+                                <small>1</small>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+                        <div class="top">
+                            <div class="profile">
+                                <img src="img/femalehat.jpeg" alt="Profile">
+                                <span>Mike Drake</span>
+                                <p>- 1h</p>
+                            </div>
+                            <span class="fas fa-ellipsis"></span>
+                        </div>
+                        <div class="info">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="video">
+                            <video controls>
+                                <source src="video/10 SECONDS VIDEO CLIP.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="row">
+                            <span class="fas fa-heart">
+                                <small>10</small>
+                            </span>
+                            <span class="fas fa-comment">
+                                <small>20k</small>
+                            </span>
+                            <span class="fas fa-share-alt">
+                                <small>3</small>
+                            </span>
+                            <span class="fas fa-bookmark">
+                                <small>1</small>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+                        <div class="top">
+                            <div class="profile">
+                                <img src="img/femalehat.jpeg" alt="Profile">
+                                <span>Mike Drake</span>
+                                <p>- 1h</p>
+                            </div>
+                            <span class="fas fa-ellipsis"></span>
+                        </div>
+                        <div class="info">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="video">
+                            <video controls>
+                                <source src="video/10 SECONDS VIDEO CLIP.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="row">
+                            <span class="fas fa-heart">
+                                <small>10</small>
+                            </span>
+                            <span class="fas fa-comment">
+                                <small>20k</small>
+                            </span>
+                            <span class="fas fa-share-alt">
+                                <small>3</small>
+                            </span>
+                            <span class="fas fa-bookmark">
+                                <small>1</small>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+                        <div class="top">
+                            <div class="profile">
+                                <img src="img/femalehat.jpeg" alt="Profile">
+                                <span>Mike Drake</span>
+                                <p>- 1h</p>
+                            </div>
+                            <span class="fas fa-ellipsis"></span>
+                        </div>
+                        <div class="info">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="video">
+                            <video controls>
+                                <source src="video/10 SECONDS VIDEO CLIP.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="row">
+                            <span class="fas fa-heart">
+                                <small>10</small>
+                            </span>
+                            <span class="fas fa-comment">
+                                <small>20k</small>
+                            </span>
+                            <span class="fas fa-share-alt">
+                                <small>3</small>
+                            </span>
+                            <span class="fas fa-bookmark">
+                                <small>1</small>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content end -->
+            </section>
+            <!-- video section end -->
+        </div>
+        <!-- Main content end-->
+    </div>
+    <!-- main container end -->
+</body>
+<script src="main/js/script.js"></script>
+</html>

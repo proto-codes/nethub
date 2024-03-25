@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nethub</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="all.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.png">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <!-- Page reloader -->
+    <div class="d-flex justify-content-center loader">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Page reloader end -->
+    <!-- main container start -->
+    <div class="main_container">
+        <!-- Load content from include.html -->
+        <div class="includedContent"></div>
+        <!-- Home section start -->
+        <section class="home_section">
+                <!-- Create post start -->
+                <div id="create1">
+                    <span class="fas fa-circle-plus"></span>
+                </div>
+                <!-- Create post end -->
+                <!-- Content start-->
+                <div class="content">
+                    <!-- Moment start -->
+                    <div class="moments">
+                        <div class="moments_info">
+                            <h1 class="fs-5">Moments</h1>
+                            <p>See All</p>
+                        </div>
+                        <div class="all_moments">
+                            <div class="my_moments">
+                                <img src="" alt="Moments" id="profile_photo">
+                                <span>&#43;</span>
+                                <p class="text-truncate text-center" id="username"></p>
+                            </div>
+                            <div class="my_moments">
+                                <img id="moments_img" src="img/femalehat.jpeg" alt="Moments">
+                                <p class="text-truncate text-center" id="username">mikedrake01</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Moments end -->
+                    <!-- Post start -->
+                    <div class="post">
+                        <div class="top mb-3">
+                            <div class="post_info">
+                                <img class="profile_pics me-1" src="img/femalehat.jpeg" alt="Profile">
+                                <span>Mike Drake</span>
+                                <p>- 1h</p>
+                            </div>
+                            <i class="fas fa-ellipsis icon"></i>
+                        </div>
+                        <div class="my_post">
+                            <p class="mb-3 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, illo commodi dicta accusamus atque voluptatibus architecto. Error quae voluptate voluptates.</p>
+                            <img class="mb-3" src="img/fruit4grape.jpeg" alt="Post">
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-3">
+                                <i class="fas fa-heart icon"></i>
+                                <small>10</small>
+                            </div>
+                            <div class="col-3">
+                                <i class="fas fa-comment icon"></i>
+                                <small>20k</small>
+                            </div>
+                            <div class="col-3">
+                                <i class="fas fa-share-alt icon"></i>
+                                <small>3</small>
+                            </div>
+                            <div class="col-3">
+                                <i class="fas fa-bookmark icon"></i>
+                                <small>1</small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Post end -->
+                </div>
+                <!-- Suggestion start -->
+                <div class="suggestion">
+                    <h1 class="mb-3 fs-5">Suggested</h1>
+                    <div class="suggested">
+                        <div class="info">
+                            <div class="box">
+                                <img src="img/footwear6.jpg" alt="" class="profile_pics me-2">
+                                <p class="text-truncate">johndoe22</p>
+                            </div>
+                            <button class="btn btn-primary px-2">Follow</button>
+                        </div>
+                        <div class="info">
+                            <div class="box">
+                                <img src="img/malewallet.jpeg" alt="" class="profile_pics me-2">
+                                <p class="text-truncate">johndoe22</p>
+                            </div>
+                            <button class="btn btn-primary px-2">Follow</button>
+                        </div>
+                        <div class="info">
+                            <div class="box">
+                                <img src="img/footwear6.jpg" alt="" class="profile_pics me-2">
+                                <p class="text-truncate">johndoe22</p>
+                            </div>
+                            <button class="btn btn-primary px-2">Follow</button>
+                        </div>
+                        <div class="info">
+                            <div class="box">
+                                <img src="img/malewallet.jpeg" alt="" class="profile_pics me-2">
+                                <p class="text-truncate">johndoe22</p>
+                            </div>
+                            <button class="btn btn-primary px-2">Follow</button>
+                        </div>
+                        <div class="info">
+                            <div class="box">
+                                <img src="img/footwear6.jpg" alt="" class="profile_pics me-2">
+                                <p class="text-truncate">johndoe22</p>
+                            </div>
+                            <button class="btn btn-primary px-2">Follow</button>
+                        </div>
+                        <div class="info">
+                            <div class="box">
+                                <img src="img/malewallet.jpeg" alt="" class="profile_pics me-2">
+                                <p class="text-truncate">johndoe22</p>
+                            </div>
+                            <button class="btn btn-primary px-2">Follow</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- suggestion end -->
+        </section>
+        <!-- Home section end -->
+    </div>
+    <!-- main container end -->
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Jquery all -->
+<script src="js/script.js"></script>
+
+<!-- Jquery home -->
+<script src="js/home.js"></script>
+</body>
+</html>

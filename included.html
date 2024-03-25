@@ -1,0 +1,190 @@
+<!-- Header start -->
+<header>
+    <div class="site_name">
+        <a class="nav-link" href="#" title="Logo" id="logo">
+            <i class="fas fa-n"></i><span> Nethub</span>
+        </a>
+    </div>
+    <div class="search_bar">
+        <form action="" method="get">
+            <i class="fas fa-search"></i>
+            <input type="search" placeholder="Search..." id="search_bar">
+        </form>
+    </div>
+    <div class="header_icon">
+        <i class="fas fa-search" id="search" title="Search"></i>
+        <i class="fas fa-comment-dots msgIcon" title="Requests"></i>
+        <i class="fas fa-archive msgIcon" title="Archive"></i>
+        <i class="fas fa-ellipsis-vertical msgIcon" title="More"></i>
+        <i class="fas fa-bell allIcon" id="notifications" title="Notifications"></i>
+        <i class="fas fa-bars allIcon" id="menu1" title="Menu"></i>
+    </div>
+</header>
+<!-- Header end -->
+
+<!-- Nav start -->
+<nav>
+    <a class="nav-link" href="#" title="Logo" id="logo">
+        <i class="fas fa-n"></i><span> Nethub</span>
+    </a>
+
+    <div class="links">
+        <a class="nav-link" href="profile.html" title="Profile">
+            <i class="fas fa-user"></i><span> Profile</span>
+        </a>
+        <a class="nav-link" href="home.html" title="Home">
+            <i class="fas fa-home"></i><span> Home</span>
+        </a>
+        <a class="nav-link hidden" href="#" title="Search" id="search1">
+            <i class="fas fa-search"></i><span> Search</span>
+        </a>
+        <a class="nav-link hidden" href="#" title="Create" id="create">
+            <i class="fas fa-square-plus"></i><span> Create</span>
+        </a>
+        <a class="nav-link" href="#" title="Friends">
+            <i class="fas fa-users"></i><span> Friends</span>
+        </a>
+        <a class="nav-link" href="message.html" title="Messages">
+            <i class="fas fa-envelope"></i><span> Messages</span>
+        </a>
+        <a class="nav-link hidden" href="#" title="Notifications" id="notifications1">
+            <i class="fas fa-bell"></i><span> Notifications</span>
+        </a>
+        <a class="nav-link" href="video.html" title="Video">
+            <i class="fas fa-video"></i><span> Video</span>
+        </a>
+        <a class="nav-link" href="#" title="Music">
+            <i class="fas fa-music"></i><span> Music</span>
+        </a>
+        <a class="nav-link" href="#" title="Book">
+            <i class="fas fa-book"></i><span> Book</span>
+        </a>
+        <a class="nav-link" href="#" title="News">
+            <i class="fas fa-newspaper"></i><span> News</span>
+        </a>
+        <a class="nav-link" href="#" title="Game">
+            <i class="fas fa-gamepad"></i><span> Game</span>
+        </a>
+        <a class="nav-link" href="#" title="Bank">
+            <i class="fas fa-university"></i><span> Bank</span>
+        </a>
+        <a class="nav-link" href="#" title="Shop">
+            <i class="fas fa-shopping-cart"></i><span> Shop</span>
+        </a>
+        <a class="nav-link" href="#" title="Bookmark">
+            <i class="fas fa-bookmark"></i><span> Bookmark</span>
+        </a>
+    </div>
+
+    <a class="nav-link" href="#" title="Menu" id="menu">
+        <i class="fas fa-bars"></i><span> Menu</span>
+    </a>
+</nav>
+<!-- Nav end -->
+
+<!-- Aside start -->
+<aside class="search_pop">
+    <form method="get" id="searchForm">
+        <i class="fas fa-arrow-left icon me-2" id="back"></i>
+        <i class="fas fa-search" id="icon"></i>
+        <input type="search" placeholder="Search..." name="search_query" id="search_input" value="">
+    </form>
+    <!-- Search result goes here -->
+    <div id="searchResults">
+    </div>
+    <div class="recent_result">
+        <div class="box">
+            <p id="recent">Recent</p>
+            <p id="clear_all">Clear all</p>
+        </div>
+        <div class="recent_search">
+            <!-- Recent search goes here -->
+            <div class="user">
+                <img class="profile_pics" src="img/femalehat.jpeg" alt="">
+                <div class="description">
+                   <h3 class="text-truncate">Mike drake</h3>
+                   <p class="text-truncate">@mikedrake</p>
+                </div>
+                <span class="fas fa-close"></span>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<aside class="notifications_pop">
+    <div class="notifications">
+        <h1 class="fs-5">Notifications</h1>
+        <span class="fas fa-cog"></span>
+    </div>
+    <div class="new">
+        <p>New</p>
+        <div class="my_notification rounded">
+            <div class="box">
+                <img src="img/femalehat.jpeg" alt="" class="profile_pics me-2">
+                <div class="description">
+                   <h5 id="people" class="text-truncate">Mike drake</h5>
+                   <p id="info" class="text-truncate">Commented on your photo and also sent you a message</p>
+                   <p id="date">2 hours ago</p>
+                </div>
+            </div>
+            <span class="fas fa-ellipsis"></span>
+        </div>
+        
+        <div class="my_notification rounded">
+            <div class="box">
+                <img src="img/malewallet.jpeg" alt="" class="profile_pics me-2">
+                <div class="description">
+                   <h5 id="people" class="text-truncate">Mike drake</h5>
+                   <p id="info" class="text-truncate">Commented on your photo and also sent you a message</p>
+                   <p id="date">2 hours ago</p>
+                </div>
+            </div>
+            <span class="fas fa-ellipsis"></span>
+        </div>
+    </div>
+</aside>
+
+<aside class="menu_pop">
+    <h1 class="fs-5 mb-3">Menu</h1>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link" href="#" id="see_tabs">
+                <i class="fas fa-folder-open me-2"></i>See Tabs
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="display" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-adjust me-2"></i>Dark/Light Mode
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="display">
+                <li><label class="dropdown-item" for="default"><input type="radio" name="mode" id="default" checked> Default</label></li>
+                <li><label class="dropdown-item" for="dark_mode"><input type="radio" name="mode" id="dark_mode"> Dark mode</label></li>
+                <li><label class="dropdown-item" for="light_mode"><input type="radio" name="mode" id="light_mode"> Light mode</label></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <h3 class="mt-4 mb-3">Settings</h3>
+        </li>
+        <li class="nav-item">
+            <form action="php/logout.php" method="post">
+                <button type="submit" class="btn btn-danger btn-block p-1 px-2" name="logout">Logout</button>
+            </form>
+        </li>
+    </ul>
+</aside>
+
+<aside class="create_pop">
+    <div class="create" id="post">
+        <span class="fas fa-pen-to-square"></span>
+        <h3>Post</h3>
+    </div>
+    <div class="create" id="moments">
+        <span class="fas fa-clock"></span>
+        <h3>Moments</h3>
+    </div>
+    <div class="create" id="live">
+        <span class="fas fa-video"></span>
+        <h3>Go live</h3>
+    </div>
+</aside>
+<!-- Aside end -->
