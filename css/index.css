@@ -59,12 +59,12 @@
 }
 
 /* Create post pop */
-.home_section #create1 {
+#createPost {
     display: none;
 }
 
 @media (max-width: 629px) {
-    .home_section #create1 {
+    #createPost {
         position: fixed;
         right: 40px;
         bottom: 80px;
@@ -74,7 +74,7 @@
         cursor: pointer;
     }
 
-    #create1 span {
+    #createPost span {
         font-size: 50px !important;
     }
 }

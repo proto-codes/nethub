@@ -45,59 +45,59 @@
                         <div class="row">
                             <div class="edit_form">
                                 <span>Username</span>
-                                <input type="text" class="text-lowercase" id="username" name="username" value='<?php echo "$username"; ?>'>
+                                <input type="text" class="text-lowercase" id="username" name="username" value="">
                             </div>
                             <div class="edit_form">
                                 <span>Firstname</span>
-                                <input type="text" id="firstname" name="firstname" value='<?php echo "$firstname"; ?>'>
+                                <input type="text" id="firstname" name="firstname" value="">
                             </div>
                             <div class="edit_form">
                                 <span>Lastname</span>
-                                <input type="text" id="lastname" name="lastname" value='<?php echo "$lastname"; ?>'>
+                                <input type="text" id="lastname" name="lastname" value="">
                             </div>
                             <div class="edit_form">
                                 <span>Nickname</span>
-                                <input type="text" id="nickname" name="nickname" value='<?php echo "$nickname"; ?>'>
+                                <input type="text" id="nickname" name="nickname" value="">
                             </div>
                             <div class="edit_form">
                                 <span>Birthday</span>
-                                <input type="date" id="birthday" name="birthday" value='<?php echo "$birthday"; ?>'>
+                                <input type="date" id="birthday" name="birthday" value="">
                             </div>
                             <div class="edit_form">
                                 <span>Email</span>
-                                <input type="email" id="email" name="email" value='<?php echo "$email" ?>'>
+                                <input type="email" id="email" name="email" value="">
                             </div>
                             <div class="edit_form">
                                 <span>Phone number</span>
-                                <input type="tel" id="phone_number" name="phone_number" value='<?php echo "$phone_number" ?>'>
+                                <input type="tel" id="phone_number" name="phone_number" value="">
                             </div>
                             <div class="edit_form">
                                 <span>Bio</span>
-                                <textarea name="bio" id="bio" rows="5"><?php echo "$bio"; ?></textarea>
+                                <textarea name="bio" id="bio" rows="5"></textarea>
                             </div>
                             <div class="edit_form">
                                 <span>Country</span>
-                                <input type="text" name="country" id="country" value='<?php echo "$country"; ?>'>
+                                <input type="text" name="country" id="country" value="">
                             </div>
                             <div class="edit_form">
                                 <span>State</span>
-                                <input type="text" name="state" id="state" value='<?php echo "$state"; ?>'>
+                                <input type="text" name="state" id="state" value="">
                             </div>
                             <div class="edit_form">
                                 <span>City</span>
-                                <input type="text" name="city" id="city" value='<?php echo "$city"; ?>'>
+                                <input type="text" name="city" id="city" value="">
                             </div>
                             <div class="edit_form">
                                 <span>Profession</span>
-                                <input type="text" id="profession" name="profession" value='<?php echo "$profession"; ?>'>
+                                <input type="text" id="profession" name="profession" value="">
                             </div>
                             <div class="edit_form">
                                 <span>Relationship</span>
-                                <input type="text" id="relationship" name="relationship" value='<?php echo "$relationship"; ?>'>
+                                <input type="text" id="relationship" name="relationship" value="">
                             </div>
                             <div class="edit_form">
                                 <span>Website</span>
-                                <input type="text" id="website" name="website" value='<?php echo "$website"; ?>'>
+                                <input type="text" id="website" name="website" value="">
                             </div>
                         </div>
                     </form>
@@ -105,99 +105,58 @@
                 <!-- Content start-->
                 <div class="content" id="profile">
                     <div class="profile">
-                        <img src="<?php echo !empty($cover_photo) ? $cover_photo : 'https://picsum.photos/640/360'; ?>" alt="Cover photo" id="cover_photo">
+                        <div id="coverPhoto">
+                            <!-- Append cover photo -->
+                        </div>
                         <i class="fas fa-camera icon" id="cover"></i>
-                        <div class="upload_cover">
+                        <div class="upload_cover addImage">
                             <p>Take photo</p>
                             <p id="add_cover">Upload cover</p>
                         </div>
 
-                        <img src="<?php echo !empty($profile_photo) ? $profile_photo : 'https://eu.ui-avatars.com/api/?name=' . urlencode("$firstname $lastname") . '&size=250'; ?>" alt="Profile photo" id="profile_photo">
-                        <div class="upload_photo">
+                        <div id="profilePhoto">
+                            <!-- Append profile photo -->
+                        </div>
+                        <i class="fas fa-camera icon" id="photo"></i>
+                        <div class="upload_photo addImage">
                             <p>Take photo</p>
                             <p id="add_photo">Upload photo</p>
                         </div>
-                        <i class="fas fa-camera icon" id="photo"></i>
                     </div>
                     <div class="box">
-                        <!-- <i class="fas fa-search"></i>
-                        <i class="fas fa-bell"></i>
-                        <i class="fas fa-envelope"></i>
-                        <i class="fas fa-ellipsis-vertical"></i> -->
+                        <i class="fas fa-search icon"></i>
+                        <i class="fas fa-bell icon"></i>
+                        <i class="fas fa-envelope icon"></i>
+                        <i class="fas fa-ellipsis-vertical icon"></i>
 
-                        <!-- Button edit profile -->
+                        <!-- Edit profile Btn -->
                         <button type="button" class="btn btn-primary p-1 px-2" id="edit_btn">Edit profile</button>
+
+                        <!-- Follow Btn -->
+                        <!-- <button class="btn btn-primary p-1 px-2">Follow</button> -->
                     </div>
 
-                    <div class="info">
-                        <h1 id="name"><small></small></h1>
-                        <p class="text-lowercase" id="username"></p>
-                        <div class="people">
-                            <span id="followers"><p>Followers</p></span>
-                            <span id="following"><p>Following</p></span>
-
-                            <!-- <span id="follow">Follow</span> -->
+                    <div class="px-3 py-4">
+                        <div id="sessionUser">
+                            <!-- Append -->
                         </div>
-                        <p id='bio'></p>
-                        <i id='career' class='fas fa-briefcase'><span></span></i>
-                        
-                        <i id='career' class='fas fa-location-dot'><span></span></i>
-                        
-                        <i id='career' class='fas fa-heart'><span></span></i>
-                        
-                        <i id='career' class='fas fa-link'><a href='$website'></a></i>
-                        
-                        <i id='career' class='fas fa-cake-candles'><span></span></i>
-                        
-                        <i id='career' class='fas fa-calendar'><span></span></i>
+
+                        <div class="d-flex gap-3 mb-3">
+                            <span id="followers"><!-- Append followers --></span>
+                            <span id="following"><!-- Append following --></span>
+                        </div>
+
+                        <div id="userInfo">
+                            <!-- Append user info -->
+                        </div>
                     </div>
                     <div class="row">
                         <p class="col text-center p-2">Posts</p>
                         <p class="col text-center p-2">Photos</p>
                         <p class="col text-center p-2">Videos</p>
                     </div>
-                    
-                    <!-- <?php foreach ($posts_data as $post): ?>
-                    <div class="post">
-                        <div class="top">
-                            <div class="profile_box">
-                                <img src="<?php echo !empty($profile_photo) ? $profile_photo : 'https://eu.ui-avatars.com/api/?name=' . urlencode("$firstname $lastname") . '&size=250'; ?>" alt="Profile">
-                                <span><?php echo "$firstname $lastname"; ?></span>
-                                <p>- <?php echo "$time_ago"; ?></p>
-                            </div>
-                            <span class="fas fa-ellipsis"></span>
-                        </div>
-                        <div class="info">
-                            <p><?php echo $post['description']; ?></p>
-                        </div>
-                        <?php if (!empty($post['image'])): ?>
-                            <div class="image">
-                                <img src="<?php echo $post['image']; ?>" alt="Post">
-                            </div>
-                        <?php elseif (!empty($post['video'])): ?>
-                            <div class="video">
-                                <video width="100%" height="400px" controls>
-                                    <source src="<?php echo $post['video']; ?>" type="video/mp4">
-                                    Your browser does not support this video tag.
-                                </video>
-                            </div>
-                        <?php endif; ?>
-                        <div class="row">
-                            <span class="fas fa-heart">
-                                <small><?php echo count($loves_data); ?></small>
-                            </span>
-                            <span class="fas fa-comment">
-                                <small><?php echo count($comments_data); ?></small>
-                            </span>
-                            <span class="fas fa-share-alt">
-                                <small><?php echo count($shares_data); ?></small>
-                            </span>
-                            <span class="fas fa-bookmark">
-                                <small><?php echo count($bookmarks_data); ?></small>
-                            </span>
-                        </div>
-                    </div>
-                   <?php endforeach; ?> -->
+                    <!-- Posts -->
+                    <div></div>
                 </div>
                 <!-- Content end -->
                 <!-- Suggestion start -->

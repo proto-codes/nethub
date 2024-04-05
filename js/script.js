@@ -120,7 +120,7 @@ $(document).ready(function () {
         event.stopPropagation();
     });
     
-    $("#menu1").on("click", function(event) {
+    $("#menuIcon").on("click", function(event) {
         if ($(".menu_pop").is(":visible")) {
             $(".menu_pop").hide();
         } else {
@@ -151,7 +151,7 @@ $(document).ready(function () {
         event.stopPropagation();
     });
     
-    $("#create1").on("click", function(event) {
+    $("#createPost").on("click", function(event) {
         if ($(".create_pop").is(":visible")) {
             $(".create_pop").hide();
         } else {

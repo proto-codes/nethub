@@ -4,7 +4,7 @@ $(document).ready(function() {
         url: 'php/session_check.php',
         success: function(data) {
             if (data.trim() === 'Authenticated') {
-                window.location.href = 'home.html';
+                window.location.href = 'index.html';
             } else {
                 console.log(data);
             }
@@ -27,8 +27,8 @@ $(document).ready(function() {
                 if(response.trim() === 'Validation successful'){
                     $("#signinErrorMsg").text(""); // Clear error message
                     $("#signinForm")[0].submit(); // submit form
-                    // Redirect user to home page
-                    window.location.href = 'home.html';
+                    // Redirect user to index page
+                    window.location.href = 'index.html';
                 } else {
                     $("#signinErrorMsg").text(response); // Display error message
                     $("#signinErrorMsg").addClass('blink');

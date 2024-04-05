@@ -71,13 +71,6 @@
     font-size: 20px !important;
 }
 
-/* .content .row {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px !important;
-} */
-
 .edit_form {
     position: relative;
 }
@@ -111,6 +104,29 @@
     position: relative;
 }
 
+.profile .addImage {
+    display: none;
+    border-radius: 10px;
+    background-color: var(--bg-gray-500);
+    border: 1px solid var(--bg-light-100);
+}
+
+.addImage p {
+    padding: 5px 10px !important;
+}
+
+.addImage p:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.profile .fa-camera {
+    min-width: 35px;
+    width: 35px;
+    height: 35px;
+    background-color: var(--bg-gray-500);
+}
+
 .profile #cover_photo {
     width: 100%;
     height: 200px;
@@ -121,31 +137,12 @@
     position: absolute;
     right: 30px;
     bottom: 20px;
-    background-color: var(--bg-gray-500);
 }
 
 .profile .upload_cover {
     position: absolute;
-    right: 80px;
-    bottom: 40px;
-    display: none;
-    border-radius: 10px 10px 0 10px;
-    background-color: var(--bg-gray-500);
-}
-
-.upload_cover p:first-child {
-    padding: 5px 10px !important;
-    border-radius: 5px 5px 0 0;
-}
-
-.upload_cover p:nth-last-of-type(1) {
-    padding: 5px 10px !important;
-    border-radius: 0 0 0 5px;
-}
-
-.upload_cover p:hover {
-    cursor: pointer;
-    background-color: var(--bg-light-100);
+    right: 70px;
+    bottom: 30px;
 }
 
 .profile #profile_photo {
@@ -162,93 +159,30 @@
 
 .profile #photo {
     position: absolute;
-    left: 150px;
-    bottom: -50px;
-    background-color: var(--bg-gray-500);
+    left: 120px;
+    bottom: -45px;
 }
 
 .profile .upload_photo {
     position: absolute;
-    left: 200px;
+    left: 160px;
     bottom: -35px;
-    display: none;
-    border-radius: 10px 10px 10px 0;
-    background-color: var(--bg-gray-500);
-}
-
-.upload_photo p:first-child {
-    padding: 5px 10px !important;
-    border-radius: 5px 5px 0 0;
-}
-
-.upload_photo p:nth-last-of-type(1) {
-    padding: 5px 10px !important;
-    border-radius: 0 0 5px 0;
-}
-
-.upload_photo p:hover {
-    cursor: pointer;
-    background-color: var(--bg-light-100);
 }
 
 .content .box {
     display: flex;
-    gap: 20px;
+    gap: 5px;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     margin-top: 10px !important;
     padding-right: 20px !important;
 }
 
-.box i {
-    width: 35px;
-    height: 35px;
-    font-size: 20px !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    border: 1px solid var(--text-color-900);
-    cursor: pointer;
-}
-
-/* Info */
-.content .info {
-    padding: 0 20px !important;
-    margin-top: 50px !important;
-    margin-bottom: 30px !important;
-}
-
-.info .box {
-    display: flex;
-}
-
-.info #name {
-    font-size: 20px !important;
-    margin-bottom: 5px !important;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.info #username {
-    color: var(--text-gray-100);
-    margin-bottom: 20px !important;
-}
-
-.info .people {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    margin-bottom: 20px !important;
-}
-
-.info #followers,
-.info #following {
+#followers,
+#following {
     display: flex;
     gap: 5px;
     font-weight: 600;
-    margin-left: 0 !important;
     color: var(--text-color-900);
 }
 
@@ -258,36 +192,22 @@
     color: var(--text-gray-100);
 }
 
-.people #follow {
-    padding: 5px 20px !important;
-    border-radius: 10px;
-    color: #fff;
-    cursor: pointer;
-    background-color: var(--skin-color);
-}
-
-.info #bio {
-    margin-bottom: 20px !important;
-}
-
-.info i {
+#userInfo i {
     margin-right: 20px !important;
-    margin-bottom: 10px !important;
+    font-size: 20px !important;
     color: var(--text-gray-100);
 }
 
-.info span {
+#userInfo span {
     text-transform: capitalize;
-    font-weight: 100;
+    font-weight: 500;
     margin-left: 5px !important;
-    color: var(--text-gray-100);
 }
 
-.info a {
-    font-weight: 100;
+#userInfo a {
     text-transform: lowercase;
+    font-weight: 500;
     margin-left: 5px !important;
-    color: var(--skin-color);
 }
 
 @media (max-width: 918px) {
