@@ -1,7 +1,7 @@
 <!-- Header start -->
 <header>
     <div class="site_name">
-        <a class="nav-link" href="#" title="Logo" id="logo">
+        <a href="#" title="Logo" id="logo">
             <i class="fas fa-n"></i><span> Nethub</span>
         </a>
     </div>
@@ -16,70 +16,73 @@
         <i class="fas fa-comment-dots msgIcon" title="Requests"></i>
         <i class="fas fa-archive msgIcon" title="Archive"></i>
         <i class="fas fa-ellipsis-vertical msgIcon" title="More"></i>
-        <i class="fas fa-bell allIcon" id="notifications" title="Notifications"></i>
-        <i class="fas fa-bars allIcon" id="menuIcon" title="Menu"></i>
+
+        <a href="#" title="Create" id="createPost">
+            <i class="fas fa-square-plus"></i>
+        </a>
+        <a href="message" title="Messages">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <!-- <i class="fas fa-bars allIcon" id="menuIcon" title="Menu"></i> -->
     </div>
 </header>
 <!-- Header end -->
 
 <!-- Nav start -->
 <nav>
-    <a class="nav-link" href="#" title="Logo" id="logo">
-        <i class="fas fa-n"></i><span> Nethub</span>
-    </a>
-
-    <div class="links">
-        <a class="nav-link" href="profile" title="Profile">
-            <i class="fas fa-user"></i><span> Profile</span>
+    <div class="navLinks">
+        <a href="#" title="Logo" id="logo">
+            <i class="fas fa-n"></i><span> Nethub</span>
         </a>
-        <a class="nav-link" href="http://127.0.0.1:5500" title="Home">
+        
+        <a href="http://localhost/nethub" title="Home">
             <i class="fas fa-home"></i><span> Home</span>
         </a>
-        <a class="nav-link hidden" href="#" title="Search" id="search1">
+        <a class="hidden" title="Search" id="search1">
             <i class="fas fa-search"></i><span> Search</span>
         </a>
-        <a class="nav-link hidden" href="#" title="Create" id="create">
+        <a class="hidden" title="Create" id="create">
             <i class="fas fa-square-plus"></i><span> Create</span>
         </a>
-        <a class="nav-link" href="#" title="Friends">
+        <a href="#" title="Friends">
             <i class="fas fa-users"></i><span> Friends</span>
         </a>
-        <a class="nav-link" href="message" title="Messages">
+        <a href="message" title="Messages">
             <i class="fas fa-envelope"></i><span> Messages</span>
         </a>
-        <a class="nav-link hidden" href="#" title="Notifications" id="notifications1">
-            <i class="fas fa-bell"></i><span> Notifications</span>
-        </a>
-        <a class="nav-link" href="video" title="Video">
+        <a href="video" title="Video">
             <i class="fas fa-video"></i><span> Video</span>
         </a>
-        <a class="nav-link" href="#" title="Music">
-            <i class="fas fa-music"></i><span> Music</span>
-        </a>
-        <a class="nav-link" href="#" title="Book">
-            <i class="fas fa-book"></i><span> Book</span>
-        </a>
-        <a class="nav-link" href="#" title="News">
-            <i class="fas fa-newspaper"></i><span> News</span>
-        </a>
-        <a class="nav-link" href="#" title="Game">
-            <i class="fas fa-gamepad"></i><span> Game</span>
-        </a>
-        <a class="nav-link" href="#" title="Bank">
-            <i class="fas fa-university"></i><span> Bank</span>
-        </a>
-        <a class="nav-link" href="#" title="Shop">
+        <a href="#" title="Shop">
             <i class="fas fa-shopping-cart"></i><span> Shop</span>
         </a>
-        <a class="nav-link" href="#" title="Bookmark">
-            <i class="fas fa-bookmark"></i><span> Bookmark</span>
+        <a class="hidden" title="Notifications" id="notificationsIcon">
+            <i class="fas fa-bell"></i><span> Notifications</span>
+        </a>
+    
+        <a href="#" title="Menu" id="menu">
+            <i class="fas fa-bars"></i><span> Menu</span>
         </a>
     </div>
-
-    <a class="nav-link" href="#" title="Menu" id="menu">
-        <i class="fas fa-bars"></i><span> Menu</span>
-    </a>
 </nav>
+<!-- <a href="#" title="Book">
+    <i class="fas fa-book"></i><span> Book</span>
+</a>
+<a href="#" title="News">
+    <i class="fas fa-newspaper"></i><span> News</span>
+</a>
+<a href="#" title="Game">
+    <i class="fas fa-gamepad"></i><span> Game</span>
+</a>
+<a href="#" title="Bank">
+    <i class="fas fa-university"></i><span> Bank</span>
+</a>
+<a href="#" title="Music">
+    <i class="fas fa-music"></i><span> Music</span>
+</a>
+<a href="#" title="Bookmark">
+    <i class="fas fa-bookmark"></i><span> Bookmark</span>
+</a> -->
 <!-- Nav end -->
 
 <!-- Aside start -->
@@ -148,12 +151,12 @@
     <h1 class="fs-5 mb-3">Menu</h1>
     <ul class="nav flex-column">
         <li class="nav-item">
-            <a class="nav-link" href="#" id="see_tabs">
+            <a href="#" id="see_tabs">
                 <i class="fas fa-folder-open me-2"></i>See Tabs
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="display" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="dropdown-toggle" href="#" id="display" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fas fa-adjust me-2"></i>Dark/Light Mode
             </a>
             <ul class="dropdown-menu" aria-labelledby="display">

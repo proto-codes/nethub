@@ -58,23 +58,5 @@
     border-radius: 10px;
 }
 
-/* Create post pop */
-#createPost {
-    display: none;
-}
-
 @media (max-width: 629px) {
-    #createPost {
-        position: fixed;
-        right: 40px;
-        bottom: 80px;
-        display: block;
-        border-radius: 50px;
-        background-color: var(--bg-color-900);
-        cursor: pointer;
-    }
-
-    #createPost span {
-        font-size: 50px !important;
-    }
 }
