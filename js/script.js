@@ -4,7 +4,7 @@ $(document).ready(function () {
         url: 'php/session_check.php',
         success: function(data) {
             if (data.trim() === 'Not authenticated!') {
-                window.location.href = 'user_auth.html';
+                window.location.href = 'user_auth';
             } else {
                 console.log(data);
             }

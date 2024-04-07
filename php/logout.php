@@ -10,7 +10,7 @@ if(isset($_POST['logout'])) {
     session_destroy();
 
     // Redirect the user to the signin page or any other page
-    header("location: user_auth.html");
+    header("location: http://localhost/nethub/user_auth");
     exit();
 }
 ?>
