@@ -106,7 +106,7 @@ nav {
     top: 0;
     left: 0;
     bottom: 0;
-    padding: 15px !important;
+    padding: 10px !important;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -171,7 +171,6 @@ nav #logo span {
 nav #menu {
     position: absolute;
     bottom: 0;
-    margin-bottom: 0 !important;
 }
 
 /* Aside */
@@ -201,7 +200,7 @@ aside::-webkit-scrollbar {
 .search_pop form {
     display: flex;
     align-items: center;
-    padding: 5px !important;
+    padding: 10px !important;
     position: sticky;
     top: 0;
     background-color: var(--bg-color-900);
@@ -209,7 +208,7 @@ aside::-webkit-scrollbar {
 
 .search_pop form #icon {
     position: absolute;
-    top: 16px;
+    top: 23px;
     left: 70px;
     color: var(--text-gray-100);
 }
@@ -340,6 +339,8 @@ aside::-webkit-scrollbar {
 }
 
 /* Menu */
+
+/* Create */
 .create_pop {
     width: 150px;
     height: auto;
@@ -369,7 +370,6 @@ aside::-webkit-scrollbar {
 .create_pop .create:last-child {
     border-bottom: none;
 }
-/* Part end */
 
 /* Sections */
 section {
@@ -576,6 +576,14 @@ section .content::-webkit-scrollbar {
         left: 0;
         right: 0;
     }
+
+    .post .top {
+        padding: 10px !important;
+    }
+    
+    .post .my_post {
+        width: 95%;
+    }
 }
 
 @media (max-width: 569px) {
@@ -601,5 +609,11 @@ section .content::-webkit-scrollbar {
 @media (max-width: 450px) {
     .navLinks .hiddenIcon {
         display: none;
+    }
+}
+
+@media (max-height: 445px) {
+    nav .navLinks {
+        justify-content: initial;
     }
 }

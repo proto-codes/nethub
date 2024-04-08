@@ -28,10 +28,36 @@ $(document).ready(function () {
                 $(".moreIcon").css("display", "");
             }
 
-            if ($(window).width() > 629 && $(window).height() <= 620) {
+            if ($(window).width() > 629 && $(window).height() > 565 && $(window).height() <= 640) {
                 $("#friends").hide();
+                $("#logo").css("display", "");
+                $("#create").css("display", "");
+                $("#shop").css("display", "");
+                $("#notificationsIcon").css("display", "");
+            } else if ($(window).width() > 629 && $(window).height() > 445 && $(window).height() <= 565) {
+                $("#logo").css("display", "");
+                $("#notificationsIcon").css("display", "");
+                $("#create").hide();
+                $("#shop").hide();
+                $("#friends").hide();
+            } else if ($(window).width() > 629 && $(window).height() > 380 && $(window).height() <= 445) {
+                $("#logo").hide();
+                $("#create").hide();
+                $("#shop").hide();
+                $("#friends").hide();
+                $("#notificationsIcon").css("display", "");
+            } else if ($(window).width() > 629 && $(window).height() <= 380) {
+                $("#logo").hide();
+                $("#create").hide();
+                $("#shop").hide();
+                $("#friends").hide();
+                $("#notificationsIcon").hide();
             } else {
+                $("#logo").css("display", "");
                 $("#friends").css("display", "");
+                $("#create").css("display", "");
+                $("#shop").css("display", "");
+                $("#notificationsIcon").css("display", "");
             }
         }
 
