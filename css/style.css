@@ -209,14 +209,14 @@ aside::-webkit-scrollbar {
 
 .search_pop form #icon {
     position: absolute;
-    top: 19px;
+    top: 16px;
     left: 70px;
     color: var(--text-gray-100);
 }
 
 .search_pop form input {
     width: 100%;
-    height: 35px;
+    height: 40px;
     padding: 0 10px 0 40px !important;
     border-radius: 15px;
     border: none;
@@ -341,11 +341,11 @@ aside::-webkit-scrollbar {
 
 /* Menu */
 .create_pop {
-    width: 200px;
+    width: 150px;
     height: auto;
-    top: initial;
+    top: 180px;
     left: 250px;
-    bottom: 300px;
+    bottom: initial;
     padding: 0 !important;
     border-radius: 0 5px 5px 0;
     border: 1px solid var(--bg-gray-500);
@@ -492,6 +492,10 @@ section .content::-webkit-scrollbar {
         left: 100px;
     }
 
+    .create_pop {
+        left: 100px;
+    }
+
     /* Section */
     section {
         padding-left: 100px !important;
@@ -551,21 +555,16 @@ section .content::-webkit-scrollbar {
     aside {
         width: 100%;
         left: 0;
-        top: 50px;
         border-right: initial;
     }
 
-    .search_pop form {
-        display: none;
-    }
-
     .create_pop {
+        top: 50px;
         left: initial;
-        right: 40px;
-        bottom: 140px;
-        border-radius: 5px;
-        border-left: initial;
+        right: 10px;
+        border-radius: 0 0 5px 5px;
         border: 1px solid var(--bg-gray-500);
+        border-top: none;
     }
 
     /* Section */
@@ -582,7 +581,7 @@ section .content::-webkit-scrollbar {
 @media (max-width: 569px) {
     /* Header */    
     header .search_bar {
-        display: none;
+        display: none !important;
     }
 
     header .header_icon #search {

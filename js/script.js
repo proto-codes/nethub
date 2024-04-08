@@ -41,20 +41,12 @@ $(document).ready(function () {
             resizeEffectOnNav();
         });
 
-        $("#search_bar").on("focus", function() {
+        $("#search_bar").on("click", function() {
             $(".search_pop").show();
         });
         
         $("#search_input").on("input", function() {
             if ($("#search_input").val().trim() !== "") {
-                $(".recent_result").hide();
-            } else {
-                $(".recent_result").show();
-            }
-        });
-        
-        $("#search_bar").on("input", function() {
-            if ($("#search_bar").val().trim() !== "") {
                 $(".recent_result").hide();
             } else {
                 $(".recent_result").show();
@@ -74,7 +66,7 @@ $(document).ready(function () {
             event.stopPropagation();
         });
     
-        $("#search1").on("click", function(event) {
+        $("#searchIcon").on("click", function(event) {
             if ($(".search_pop").is(":visible")) {
                 $(".search_pop").hide();
             } else {
@@ -91,10 +83,10 @@ $(document).ready(function () {
             const isClickInsidesearch_pop = $(event.target).closest(".search_pop").length > 0;
             const isClickInsidesearch_bar = $("#search_bar").is(event.target);
             
-            if (!isClickInsidesearch_pop && !isClickInsidesearch_bar) {
+            if ($(".search_pop").is(":visible") && !isClickInsidesearch_pop && !isClickInsidesearch_bar) {
                 $(".search_pop").hide();
             }
-        });       
+        });
         
         $("#back").on("click", function() {
             $(".search_pop").hide();

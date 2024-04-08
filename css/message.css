@@ -89,15 +89,11 @@
 }
 
 .message_list #new_chat {
-    font-size: 25px !important;
     position: absolute;
-    bottom: 50px;
+    bottom: 100px;
     right: 50px;
-    padding: 10px !important;
-    border-radius: 50px;
     color: var(--bg-color-900);
     background-color: var(--text-color-900);
-    cursor: pointer;
 }
 
 .info .container {
@@ -202,6 +198,13 @@ section .content {
     bottom: 0;
     padding: 10px 0 !important;
     background-color: var(--bg-color-900);
+}
+
+.message_box i {
+    min-width: 45px;
+    width: 45px;
+    height: 45px;
+    font-size: 25px !important;
 }
 
 .message_box form #message_bar {

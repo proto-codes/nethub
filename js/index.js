@@ -5,14 +5,7 @@ $(document).ready(function() {
         type: 'POST',
         dataType: 'json',
         success: function(combinedData) {
-            // // Display JSON combinedData
-            // console.log(combinedData);
-
-            // // Display only the nickname from profile data
-            // var nickname = combinedData.profile_data.nickname;
-            // console.log("Nickname:", nickname);
-
-            // // Iterate over each post and display
+            // Iterate over each post and display
             // combinedData.post_data.forEach(function(post) {
             //     console.log(post.upload_time);
             // });
