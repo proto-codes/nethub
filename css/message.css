@@ -254,20 +254,4 @@ section .content {
 }
 
 @media (max-width: 629px) {
-    header .search_bar input {
-        width: 250px;
-    }
-
-    .msgIcon {
-        display: flex !important;
-    }
-
-    .homeIcon {
-        display: none !important;
-    }
-    
-    .message_list .messageHeader {
-        display: none;
-    }
-
 }

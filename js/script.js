@@ -16,6 +16,31 @@ $(document).ready(function () {
 
     // Load content from include.html
     $(".includedContent").load("included.html", function () {
+        function resizeEffectOnNav() {
+            if ($(window).width() > 629 && $(window).height() >= 1008) {
+                $(".hiddenIcon").css("display", "flex");
+                $(".moreIcon").css("display", "flex");
+            } else if ($(window).width() > 629 && $(window).height() >= 800) {
+                $(".hiddenIcon").css("display", "flex");
+                $(".moreIcon").css("display", "");
+            } else {
+                $(".hiddenIcon").css("display", "");
+                $(".moreIcon").css("display", "");
+            }
+
+            if ($(window).width() > 629 && $(window).height() <= 620) {
+                $("#friends").hide();
+            } else {
+                $("#friends").css("display", "");
+            }
+        }
+
+        resizeEffectOnNav();
+
+        $(window).on("resize", function () {
+            resizeEffectOnNav();
+        });
+
         $("#search_bar").on("focus", function() {
             $(".search_pop").show();
         });

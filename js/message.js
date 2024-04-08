@@ -1,9 +1,26 @@
 $(document).ready(function() {
+    $.ajax({
+        url: 'php/fetch.php',
+        type: 'POST',
+        dataType: 'json',
+        success: function(combinedData) {            
+            // Access data
+            const userData = combinedData.user_data
+            const profileData = combinedData.profile_data
+
+            // Append data to HTML element
+            // https://picsum.photos/640/360
+            $("").append(`<img class="profile_pics" src="https://eu.ui-avatars.com/api/?name=${userData.firstname}+${userData.lastname}" alt="Profile photo" title="Profile">`);
+        },
+        error: function(xhr, status, error) {
+            // Handle errors
+            console.error(xhr.responseText);
+        }
+    });
+
     function toggleVisibilityOnClick() {
         if ($(".content").is(":visible") && $(window).width() <= 629) {
-            $("header").hide();
             $("nav").hide();
-            $("section").css("cssText", "padding: 0 !important;");
         }
     }
 
@@ -23,9 +40,7 @@ $(document).ready(function() {
             $(".exitMsg").on("click", function() {
                 $(".message_list").show();
                 $(".content").hide();
-                $("header").css("display", "");
                 $("nav").css("display", "");
-                $("section").css("padding", "");
             });
         } else {
             // Unbind click event handlers when the window width is greater than 629 pixels
@@ -34,13 +49,9 @@ $(document).ready(function() {
             $(".content").show();
         }
         if ($(".content").is(":visible") && $(window).width() > 629) {
-            $("header").css("display", "");
             $("nav").css("display", "");
-            $("section").css("padding", "");
         } else if ($(".content").is(":visible") && $(window).width() <= 629) {
-            $("header").hide();
             $("nav").hide();
-            $("section").css("cssText", "padding: 0 !important;");
         }
     }
     toggleVisibilityOnResize();

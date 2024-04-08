@@ -51,7 +51,7 @@ a {
     min-width: 40px;
     width: 40px;
     height: 40px;
-    font-size: 25px !important;
+    font-size: 20px !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -122,6 +122,10 @@ nav .navLinks {
     flex-direction: column;
     justify-content: center;
     margin-left: 20px !important;
+}
+
+.navLinks .hiddenIcon, .navLinks .moreIcon {
+    display: none;
 }
 
 nav a {
@@ -496,99 +500,6 @@ section .content::-webkit-scrollbar {
 }
 
 @media (max-width: 629px) {
-    /* Header */
-    .main_container header {
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: space-between;
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        border-bottom: 1px solid var(--bg-gray-500);
-        background-color: var(--bg-color-900);
-        z-index: 2;
-    }
-
-    header .site_name {
-        display: flex;
-        align-items: center;
-        padding-left: 10px !important;
-    }
-
-    .site_name a i,
-    .site_name a span {
-        font-size: 30px !important;
-    }
-
-    .site_name a i {
-        display: none;
-    }
-
-    header .search_bar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    header .search_bar .fa-search {
-        position: relative;
-        top: 0;
-        left: 33px;
-        color: var(--text-gray-100);
-    }
-
-    header .search_bar input {
-        width: 300px;
-        height: 35px;
-        padding: 0 10px 0 40px !important;
-        border-radius: 15px;
-        border: none;
-        background-color: var(--bg-gray-500);
-    }
-
-    header .search_bar input::placeholder {
-        color: var(--text-gray-100);
-    }
-
-    header .search_bar input:focus {
-        outline: 2px solid var(--text-gray-100);
-    }
-
-    header .header_icon {
-        display: flex;
-        justify-content: right;
-    }
-
-    header .header_icon #search {
-        display: none;
-    }
-
-    header .header_icon i {
-        height: 45px;
-        width: 45px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 2px !important;
-        border-radius: 10px;
-        font-size: 20px !important;
-        cursor: pointer;
-    }
-
-    header .header_icon i:hover {
-        background-color: var(--bg-gray-500);
-    }
-
-    header .header_icon i:active {
-        background-color: var(--bg-color-900);
-    }
-    
-    .msgIcon {
-        display: none !important;
-    }
-
     /* nav */
     nav {
         width: 100%;
@@ -611,6 +522,10 @@ section .content::-webkit-scrollbar {
 
     .navLinks .hidden {
         display: none;
+    }
+
+    .navLinks .hiddenIcon {
+        display: flex;
     }
     
     nav a {
@@ -655,7 +570,7 @@ section .content::-webkit-scrollbar {
 
     /* Section */
     section {
-        padding: 50px 0 0 0 !important;
+        padding: 0 !important;
         position: fixed;
         top: 0;
         bottom: 0;
@@ -685,7 +600,7 @@ section .content::-webkit-scrollbar {
 }
 
 @media (max-width: 450px) {
-    #hidden {
+    .navLinks .hiddenIcon {
         display: none;
     }
 }
