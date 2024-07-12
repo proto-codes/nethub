@@ -1,0 +1,151 @@
+:root {
+    /* Light Color */
+    --color-100: #111;
+    --color-900: #eee;
+    --bg-color-500: #444;
+    --bg-color-100: #ccc;
+    --text-color-100: #666;
+
+    /* Dark Color */
+    /* --color-100: #eee;
+    --color-900: #111;
+    --bg-color-500: #aaa;
+    --bg-color-100: #444;
+    --text-color-100: #666; */
+
+    --skin-color: #20e;
+
+    --gap: 0.5rem;
+    --border-radius: 0.5rem;
+    --border-line: 1px solid var(--bg-color-100);
+    --box-shadow: 0 0 10px var(--bg-color-100);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--color-100);
+}
+
+body {
+    background-color: var(--color-900) !important;
+}
+
+/* ::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+} */
+
+/* ::-webkit-scrollbar-thumb {
+    background-color: var(--bg-color-500);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-color-100);
+} */
+
+a {
+    text-decoration: none !important;
+}
+
+li {
+    list-style: none !important;
+}
+
+.img {
+    min-width: 4rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.hover:hover {
+    background-color: var(--bg-color-100) !important;
+    cursor: pointer;
+}
+
+/* .active {
+    color: red;
+} */
+
+.page-container {
+    padding-left: 13.7rem !important;
+}
+
+section {
+    width: 100%;
+    height: calc(100vh - 3rem);
+    padding: 1rem;
+    position: relative;
+    overflow: auto;
+}
+
+/* Moments start */
+.moments {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    overflow-x: auto;
+}
+
+.moments::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.my-moments {
+    border: var(--border-line);
+    border-radius: var(--border-radius);
+}
+
+.my-moments img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+/* Moments end */
+
+/* Profie Start */
+
+.profile-cover-img {
+    height: 15rem;
+    object-fit: cover;
+}
+
+.profile-photo {
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    position: absolute;
+    left: 2rem;
+    top: 10rem;
+}
+
+/* Profile End */
+
+@media (max-width: 992px) {
+    .page-container {
+        padding-left: 4.8rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-container {
+        padding-left: 0rem !important;
+    }
+
+    section {
+        height: calc(100vh - 6.5rem);
+        margin-top: 3.5rem;
+        margin-bottom: 3.5rem;
+        padding: 0.5rem;
+    }
+
+    .my-moments img {
+        width: 8rem;
+        height: 8rem;
+    }
+}
