@@ -3,7 +3,7 @@ import React from 'react';
 function Header() {
   return (
     <div>
-        <header className='d-flex d-sm-none'>
+        <header className='d-sm-none'>
             <div className="site-name">
                 <a href="/" title="Logo">
                     <span className='fs-1 ms-2'> Nethub</span>

@@ -30,7 +30,7 @@ function Home() {
 
   return (
     <div>
-        <div className="page-container container-fluid d-flex pe-0">
+        <div className="container-fluid d-flex p-0">
           <Header />
           <Nav menuBtn={handleMenuVisibility} searchBtn={handleSearchVisibility} notificationsBtn={handleNotificationsVisibility} messagesBtn={handleMessagesVisibility} />
           {menuVisible && (
@@ -47,7 +47,7 @@ function Home() {
             <Search />
           )}
           
-          <section>      
+          <section className='home-section'>      
             {/* Moments start */}
                     <div className='d-flex flex-column'>
                         <div className="d-flex align-items-center justify-content-between">

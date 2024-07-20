@@ -8,7 +8,7 @@ function Videos() {
       <div className="page-container container-fluid d-flex">
           {/* <Header /> */}
           <Nav />
-          <section className="home-section">
+          <section className="video-section">
             <h3>Videos</h3>
           </section>
           <Suggestions />

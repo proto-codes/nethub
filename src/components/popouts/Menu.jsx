@@ -34,7 +34,7 @@ function Menu() {
             <div className="col">
               <li title="Videos" className='hover rounded'>
                   <Link to='/videos' className='d-flex gap-2 align-items-center p-1 px-2'>
-                  <i className="bi bi-film fs-2"></i><span className='fs-4'> Video</span>
+                  <i className="bi bi-camera-reels fs-2"></i><span className='fs-4'> Video</span>
                   </Link>
               </li>
             </div>

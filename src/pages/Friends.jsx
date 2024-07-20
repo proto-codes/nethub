@@ -8,7 +8,7 @@ function Friends() {
       <div className="page-container container-fluid d-flex">
           {/* <Header /> */}
           <Nav />
-          <section className="home-section">
+          <section className="friends-section">
             <h3>Friends</h3>
           </section>
           <Suggestions />
