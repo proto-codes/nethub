@@ -1,0 +1,245 @@
+:root {
+    --text-light: #ffffff;
+    --custom-color-1: #0d6efd;
+    --custom-color-2: #fa5b0f;
+    --custom-color-3: #37b182;
+    --custom-color-4: #ec1839;
+    --custom-color-5: #f021b2;
+}
+
+:root[data-bs-theme='light'] {
+    --text-auto: #212529;
+}
+
+:root[data-bs-theme='dark'] {
+    --text-auto: #ffffff;
+}
+
+:root[data-custom-color='custom-color-1'] {
+    --custom-color: #0d6efd;
+}
+
+:root[data-custom-color='custom-color-2'] {
+    --custom-color: #fa5b0f;
+}
+
+:root[data-custom-color='custom-color-3'] {
+    --custom-color: #37b182;
+}
+
+:root[data-custom-color='custom-color-4'] {
+    --custom-color: #ec1839;
+}
+
+:root[data-custom-color='custom-color-5'] {
+    --custom-color: #f021b2;
+}
+
+.custom-color-1 {
+    background-color: var(--custom-color-1);
+}
+
+.custom-color-2 {
+    background-color: var(--custom-color-2);
+}
+
+.custom-color-3 {
+    background-color: var(--custom-color-3);
+}
+
+.custom-color-4 {
+    background-color: var(--custom-color-4);
+}
+
+.custom-color-5 {
+    background-color: var(--custom-color-5);
+}
+
+.text-custom-color {
+    color: var(--custom-color) !important;
+}
+
+.bg-custom-color {
+    background-color: var(--custom-color) !important;
+}
+
+.text-auto {
+    color: var(--text-auto) !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+a:active, button:active {
+    outline: 2px solid var(--custom-color) !important;
+    outline-offset: 2px;
+    border-radius: 0.375rem;
+    transition: outline-offset 0.2s;
+}
+
+.active {
+    font-weight: 500 !important;
+}
+
+.profile-img {
+    min-width: 4rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+/* Signin Start */
+.bg-image {
+    background-image: url('../src/assets/img/bg.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+/* Signin End */
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Nav Start */
+nav {
+    height: 100vh;
+}
+/* Nav End */
+
+/* Popout Start */
+.menu-popout {
+    width: 25rem;
+    height: 100vh;
+}
+/* Popout End */
+
+/* Moments start */
+.moments::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+/* Moments end */
+
+/* Profile Start */
+.profile-cover-img {
+    height: calc(10rem + 5vh);
+    object-fit: cover;
+}
+
+.cover-img-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.profile-photo {
+    width: calc(8rem + 2vw);
+    height: calc(8rem + 2vw);
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 6rem;
+    transform: translate(-50%, -50%);
+}
+
+.transparent-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* Profile End */
+
+/* Message Start */
+.message-body {
+    height: calc(100vh - 8.3rem);
+}
+
+.msg-tab-truncate {
+    width: calc(100% - 5rem);
+}
+
+.active-msg-tab li .active {
+    border-left: 2px solid var(--custom-color) !important;
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+}
+
+.chat-body {
+    height: calc(100vh - 9rem);
+}
+/* Message End */
+
+/* sm(mobile devive) */
+@media (max-width: 576px) {
+    .container-fluid {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .border-end {
+        border-right: none !important;
+    }
+
+    .border-start {
+        border-left: none !important;
+    }
+
+    nav {
+        height: 3.5rem !important;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 0 !important;
+        border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    }
+
+    .nav-box {
+        height: initial !important;
+        display: block !important;
+    }
+
+    .nav-box ul {
+        flex-direction: row !important;
+        margin: 0 !important;
+        justify-content: space-between;
+        border-bottom: none !important;
+    }
+
+    .nav-box ul li a i {
+        display: flex;
+        align-items: center;
+        font-size: calc(1.375rem + 1.9vw) !important;
+        padding: .25rem !important;
+    }
+
+    .nav-tab-hidden {
+        display: none !important;
+    }
+    
+    .nav-hidden {
+        display: none !important;
+    }
+
+    /* Popout */
+    .menu-popout {
+        width: 100%;
+        right: 0;
+    }
+
+    /* Section */
+    .home-section {
+        height: calc(100vh - 7rem);
+        margin-top: 3.5rem;
+    }
+    
+    .video-section, .friends-section, .notifications-section {
+        height: calc(100vh - 3.5rem);
+    }
+
+    /* Message */
+    .message-body {
+        height: calc(100vh - 8.3rem);
+    }
+}
