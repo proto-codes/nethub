@@ -71,7 +71,7 @@
     cursor: pointer;
 }
 
-a:active, button:active {
+a:active, button:active, .button:active {
     outline: 2px solid var(--custom-color) !important;
     outline-offset: 2px;
     border-radius: 0.375rem;

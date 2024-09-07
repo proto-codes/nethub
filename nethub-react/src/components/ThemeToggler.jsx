@@ -1,6 +1,4 @@
 import React, { useEffect, useState, useCallback } from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon, faAdjust } from '@fortawesome/free-solid-svg-icons';
 
 const ThemeToggler = () => {
   const getStoredTheme = () => localStorage.getItem('theme');
@@ -52,6 +50,15 @@ const ThemeToggler = () => {
     showActiveTheme(newTheme);
   }, []);
 
+  const getIconClass = () => {
+    const icons = {
+      light: 'bi-sun',
+      dark: 'bi-moon',
+      auto: 'bi-circle-half',
+    };
+    return `${icons[theme]} theme-icon-active fs-4`;
+  };
+
   const showActiveTheme = (theme) => {
     const themeSwitcher = document.querySelector('#bd-theme');
     if (!themeSwitcher) {
@@ -75,16 +82,16 @@ const ThemeToggler = () => {
     if (activeThemeIcon) {
       switch (theme) {
         case 'light':
-          activeThemeIcon.setAttribute('icon', faSun.iconName);
+          activeThemeIcon.className = 'bi-sun theme-icon-active fs-4';
           break;
         case 'dark':
-          activeThemeIcon.setAttribute('icon', faMoon.iconName);
+          activeThemeIcon.className = 'bi-moon theme-icon-active fs-4';
           break;
         case 'auto':
-          activeThemeIcon.setAttribute('icon', faAdjust.iconName);
+          activeThemeIcon.className = 'bi-circle-half theme-icon-active fs-4';
           break;
         default:
-          activeThemeIcon.setAttribute('icon', faSun.iconName);
+          activeThemeIcon.className = 'bi-sun theme-icon-active fs-4';
       }
     }
 
@@ -129,8 +136,7 @@ const ThemeToggler = () => {
       <div className="dropdown" id="bd-theme" role="button" tabIndex="0">
         <button className="btn border dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <span className="fs-5" id="bd-theme-text">Toggle theme </span>
-          {/* <FontAwesomeIcon icon={theme === 'dark' ? faMoon : theme === 'auto' ? faAdjust : faSun} className="theme-icon-active fs-4" /> */}
-          <i className={theme === 'dark' ? 'bi-moon theme-icon-active fs-4' : theme === 'auto' ? 'bi-circle-half theme-icon-active fs-4' : 'bi-sun theme-icon-active fs-4'}></i>
+          <i className={getIconClass()}></i>
         </button>
         <div className="dropdown-menu p-2">
           <div className="d-flex gap-1 mb-1">

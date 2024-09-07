@@ -100,7 +100,7 @@ function Menu(props) {
           <ThemeToggler />
           <br />
 
-          <Link to='/signin' className='btn btn-danger'>Sign Out</Link>
+          <Link to='/login' className='btn btn-danger'>Logout</Link>
         </div>   
     </div>
   )

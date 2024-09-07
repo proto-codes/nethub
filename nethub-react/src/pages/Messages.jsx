@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Nav from '../components/Nav';
+import Menu from '../components/Menu';
 import profile from '../assets/img/malewatches.jpeg';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -12,10 +13,19 @@ function Messages() {
 
   const [textAreaValue, setTextAreaValue] = useState('');
 
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const handleMenuVisibility = () => {
+    setMenuVisible(!menuVisible);
+  };
+
   return (
     <div>
       <div className="container-fluid d-flex">
-          <Nav messagesActive="text-light bg-custom-color active" hideNav='nav-hidden' />
+          <Nav messagesActive="text-light bg-custom-color active" hideNav='nav-hidden' menuBtn={handleMenuVisibility} />
+          {menuVisible && (
+            <Menu closeMenuBtn={handleMenuVisibility} />
+          )}
 
           <section className="messages-section">
             <div className="row m-0">

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Nav from '../components/Nav';
+import Menu from '../components/Menu';
 import Suggestions from '../components/Suggestions';
 import profile from '../assets/img/malewatches.jpeg';
 import { useNavigate } from 'react-router-dom';
@@ -11,10 +12,19 @@ function Search() {
     navigate(-1);
   };
 
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const handleMenuVisibility = () => {
+    setMenuVisible(!menuVisible);
+  };
+
   return (
     <div>
       <div className="container-fluid d-flex">
-          <Nav notificationsActive="text-light bg-custom-color active" />
+          <Nav notificationsActive="text-light bg-custom-color active" menuBtn={handleMenuVisibility} />
+          {menuVisible && (
+            <Menu closeMenuBtn={handleMenuVisibility} />
+          )}
           
           <section className='notifications-section p-2 bg-body'>
             <div className="d-flex justify-content-between mb-2">

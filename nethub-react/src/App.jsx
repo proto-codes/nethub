@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+// import './index.css';
 import './App.css';
 import NotFound from './pages/NotFound';
 import Home from './pages/Home';
@@ -13,8 +14,8 @@ import Messages from './pages/Messages';
 import Friends from './pages/Friends';
 import Videos from './pages/Videos';
 import Shop from './pages/Shop';
-import Signin from './pages/auth/Signin';
-import Signup from './pages/auth/Signup';
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
 import Moments from './pages/Moments';
 
 function App() {
@@ -31,12 +32,12 @@ function App() {
         <Route path='/friends' element={<Friends />} />
         <Route path='/videos' element={<Videos />} />
         <Route path='/shop' element={<Shop />} />
-        <Route path='/signin' element={<Signin />} />
-        <Route path='/signup' element={<Signup />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
 export default App;

@@ -10,7 +10,7 @@ function Header() {
             <div>
                 <a href="/" title="Logo" className='fs-1 ms-2 text-body text-decoration-none'>Nethub</a>
             </div>
-            <ul className="nav nav-pills gap-2">
+            <ul className="nav nav-pills">
                 <li title="Search" className='nav-item'>
                     <Link to='/search' className='nav-link text-body'>
                     <i className="bi bi-search fs-1"></i>
@@ -21,9 +21,9 @@ function Header() {
                     <i className="bi bi-plus-square fs-1"></i>
                     </Link>
                     <ul className="dropdown-menu">
-                        <li><a href="#" className="dropdown-item"><i className="bi bi-pencil-square"></i> Post</a></li>
-                        <li><a href="#" className="dropdown-item"><i className="bi bi-clock"></i> Moment</a></li>
-                        <li><a href="#" className="dropdown-item"><i className="bi bi-play-btn"></i> Live</a></li>
+                        <li><a href="#" className="dropdown-item fs-5"><i className="bi bi-pencil-square"></i> Post</a></li>
+                        <li><a href="#" className="dropdown-item fs-5"><i className="bi bi-clock"></i> Moment</a></li>
+                        <li><a href="#" className="dropdown-item fs-5"><i className="bi bi-play-btn"></i> Live</a></li>
                     </ul>
                 </li>                
                 <li title="Messages" className='nav-item'>
