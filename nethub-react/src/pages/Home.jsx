@@ -17,7 +17,7 @@ function Home() {
     <div>
         <div className="container-fluid d-flex">
           <Header />
-          <Nav homeActive="text-light bg-custom-color active" menuBtn={handleMenuVisibility} />
+          <Nav homeActive="bg-custom-color active" menuBtn={handleMenuVisibility} />
           {menuVisible && (
             <Menu closeMenuBtn={handleMenuVisibility} />
           )}
@@ -27,7 +27,7 @@ function Home() {
             <div className='d-flex flex-column'>
                 <div className="d-flex align-items-center justify-content-between">
                     <h3>Moments</h3>
-                    <Link className='fs-5 text-decoration-none' to='/moments'>See All</Link>
+                    <Link className='fs-5 text-decoration-none text-custom-color' to='/moments'>See All</Link>
                 </div>
 
                 <div className="moments d-flex align-items-center gap-2 overflow-auto">
@@ -36,7 +36,7 @@ function Home() {
                         <img src={moment} alt="" className='rounded-top object-fit-cover' style={{width: '8rem', height: '10rem'}} />
 
                         <div className="w-100 position-absolute start-0 end-0 bottom-0 d-flex justify-content-center align-items-center m-0 p-1 bg-body bg-opacity-75">
-                          <button className="btn btn-primary bi bi-plus-square fs-3"></button>
+                          <button className="btn bg-custom-color bi bi-plus-square fs-3"></button>
                         </div>
                       </div>
 

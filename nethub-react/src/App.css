@@ -18,19 +18,15 @@
 :root[data-custom-color='custom-color-1'] {
     --custom-color: #0d6efd;
 }
-
 :root[data-custom-color='custom-color-2'] {
     --custom-color: #fa5b0f;
 }
-
 :root[data-custom-color='custom-color-3'] {
     --custom-color: #37b182;
 }
-
 :root[data-custom-color='custom-color-4'] {
     --custom-color: #ec1839;
 }
-
 :root[data-custom-color='custom-color-5'] {
     --custom-color: #f021b2;
 }
@@ -38,19 +34,15 @@
 .custom-color-1 {
     background-color: var(--custom-color-1);
 }
-
 .custom-color-2 {
     background-color: var(--custom-color-2);
 }
-
 .custom-color-3 {
     background-color: var(--custom-color-3);
 }
-
 .custom-color-4 {
     background-color: var(--custom-color-4);
 }
-
 .custom-color-5 {
     background-color: var(--custom-color-5);
 }
@@ -61,10 +53,7 @@
 
 .bg-custom-color {
     background-color: var(--custom-color) !important;
-}
-
-.text-auto {
-    color: var(--text-auto) !important;
+    color: var(--text-light) !important;
 }
 
 .cursor-pointer {

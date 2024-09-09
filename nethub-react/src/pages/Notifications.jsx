@@ -21,7 +21,7 @@ function Search() {
   return (
     <div>
       <div className="container-fluid d-flex">
-          <Nav notificationsActive="text-light bg-custom-color active" menuBtn={handleMenuVisibility} />
+          <Nav notificationsActive="bg-custom-color active" menuBtn={handleMenuVisibility} />
           {menuVisible && (
             <Menu closeMenuBtn={handleMenuVisibility} />
           )}

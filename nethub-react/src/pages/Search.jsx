@@ -21,7 +21,7 @@ function Search() {
   return (
     <div>
       <div className="container-fluid d-flex">
-          <Nav searchActive="text-light bg-custom-color active" hideNav='nav-hidden' menuBtn={handleMenuVisibility} />
+          <Nav searchActive="bg-custom-color active" hideNav='nav-hidden' menuBtn={handleMenuVisibility} />
           {menuVisible && (
             <Menu closeMenuBtn={handleMenuVisibility} />
           )}

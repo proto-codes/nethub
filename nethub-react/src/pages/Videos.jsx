@@ -13,7 +13,7 @@ function Videos() {
   return (
     <div>
       <div className="container-fluid d-flex">
-        <Nav videoActive="text-light bg-custom-color active" menuBtn={handleMenuVisibility} />
+        <Nav videoActive="bg-custom-color active" menuBtn={handleMenuVisibility} />
         {menuVisible && (
           <Menu closeMenuBtn={handleMenuVisibility} />
         )}

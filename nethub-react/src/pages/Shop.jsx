@@ -13,7 +13,7 @@ function Shop() {
   return (
     <div>
       <div className="container-fluid d-flex">
-        <Nav shopActive="text-light bg-custom-color active" menuBtn={handleMenuVisibility} />
+        <Nav shopActive="bg-custom-color active" menuBtn={handleMenuVisibility} />
         {menuVisible && (
           <Menu closeMenuBtn={handleMenuVisibility} />
         )}

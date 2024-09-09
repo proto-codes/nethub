@@ -17,8 +17,11 @@ import Shop from './pages/Shop';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import Moments from './pages/Moments';
+import UseTheme from './assets/js/UseTheme';
 
 function App() {
+  UseTheme();
+
   return (
     <BrowserRouter>
       <Routes>

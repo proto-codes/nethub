@@ -12,7 +12,7 @@ function NotFound() {
             <h1 className='fw-bolder display-1'>404</h1>
             <h4>Sorry we couldn't find the page.</h4>
             <p>But don't worry, you can find plenty of other things on our hompage</p>
-            <Link to='/' className='btn btn-primary'>Back to homepage</Link>
+            <Link to='/' className='btn bg-custom-color'>Back to homepage</Link>
           </div>
         </section>
       </div>

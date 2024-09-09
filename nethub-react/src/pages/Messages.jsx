@@ -22,7 +22,7 @@ function Messages() {
   return (
     <div>
       <div className="container-fluid d-flex">
-          <Nav messagesActive="text-light bg-custom-color active" hideNav='nav-hidden' menuBtn={handleMenuVisibility} />
+          <Nav messagesActive="bg-custom-color active" hideNav='nav-hidden' menuBtn={handleMenuVisibility} />
           {menuVisible && (
             <Menu closeMenuBtn={handleMenuVisibility} />
           )}
@@ -87,7 +87,7 @@ function Messages() {
                                 </div>
                               </div>
                               <div className="d-flex flex-column justify-content-center align-items-center" style={{width: '5rem'}}>
-                                <span className="bg-primary text-light d-flex align-items-center justify-content-center rounded-circle p-1 text-truncate" style={{width: '30px', height: '30px', fontSize: '16px'}}>1</span>
+                                <span className="bg-custom-color text-light d-flex align-items-center justify-content-center rounded-circle p-1 text-truncate" style={{width: '30px', height: '30px', fontSize: '16px'}}>1</span>
                                 <p className='p-0 m-0 text-body fw-lighter' style={{fontSize: '16px'}}>01/07/2024</p>
                               </div>
                             </a>
@@ -98,30 +98,30 @@ function Messages() {
                                 <img src={profile} alt="" className='profile-img' />
                                 <div className='msg-tab-truncate d-flex flex-column justify-content-center'>
                                   <h5 className='w-100 p-0 m-0 text-truncate'>Mike Drake</h5>
-                                  <p className='w-100 p-0 m-0 fs-5 fw-lighter text-truncate'><i className='bi bi-check-circle text-primary'></i> Hello!</p>
+                                  <p className='w-100 p-0 m-0 fs-5 fw-lighter text-truncate'><i className='bi bi-check-circle text-custom-color'></i> Hello!</p>
                                 </div>
                               </div>
                               <div className="d-flex flex-column justify-content-center align-items-center" style={{width: '5rem'}}>
-                                {/* <span className="bg-primary text-light d-flex align-items-center justify-content-center rounded-circle p-1 text-truncate" style={{width: '30px', height: '30px', fontSize: '16px'}}>1</span> */}
+                                {/* <span className="bg-custom-color text-light d-flex align-items-center justify-content-center rounded-circle p-1 text-truncate" style={{width: '30px', height: '30px', fontSize: '16px'}}>1</span> */}
                                 <p className='p-0 m-0 text-body fw-lighter' style={{fontSize: '16px'}}>Yesterday</p>
                               </div>
                             </a>
                           </li>
                         </ul>
 
-                        <button className='bi bi-pencil-square btn btn-primary fs-4' style={{position: 'absolute', bottom: '5rem', right: '3rem'}}></button>
+                        <button className='bi bi-pencil-square btn bg-custom-color fs-4' style={{position: 'absolute', bottom: '5rem', right: '3rem'}}></button>
                       </div>
 
                       <div className="tab-pane fade h-100" id="groups" role='tabpanel' aria-labelledby='groups-tab'>
                         groups content
                         
-                        <button className='bi bi-building-add btn btn-primary fs-4' style={{position: 'absolute', bottom: '5rem', right: '3rem'}}></button>
+                        <button className='bi bi-building-add btn bg-custom-color fs-4' style={{position: 'absolute', bottom: '5rem', right: '3rem'}}></button>
                       </div>
 
                       <div className="tab-pane fade h-100" id="calls" role='tabpanel' aria-labelledby='calls-tab'>
                         calls content
                         
-                        <button className='bi bi-telephone-plus btn btn-primary fs-4' style={{position: 'absolute', bottom: '5rem', right: '3rem'}}></button>
+                        <button className='bi bi-telephone-plus btn bg-custom-color fs-4' style={{position: 'absolute', bottom: '5rem', right: '3rem'}}></button>
                       </div>
                     </div>
                   </div>

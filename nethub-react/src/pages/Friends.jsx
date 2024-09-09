@@ -13,7 +13,7 @@ function Friends() {
   return (
     <div>
       <div className="container-fluid d-flex">
-          <Nav friendsActive="text-light bg-custom-color active" menuBtn={handleMenuVisibility} />
+          <Nav friendsActive="bg-custom-color active" menuBtn={handleMenuVisibility} />
           {menuVisible && (
             <Menu closeMenuBtn={handleMenuVisibility} />
           )}
