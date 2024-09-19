@@ -103,6 +103,11 @@ nav {
     width: 25rem;
     height: 100vh;
 }
+
+.menu-popout::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
 /* Popout End */
 
 /* Moments start */

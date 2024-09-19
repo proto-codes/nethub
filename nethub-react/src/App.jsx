@@ -17,6 +17,7 @@ import Shop from './pages/Shop';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import Moments from './pages/Moments';
+import Bookmark from './pages/Bookmark';
 import UseTheme from './assets/js/UseTheme';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path='/friends' element={<Friends />} />
         <Route path='/videos' element={<Videos />} />
         <Route path='/shop' element={<Shop />} />
+        <Route path='/bookmark' element={<Bookmark />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='*' element={<NotFound />} />

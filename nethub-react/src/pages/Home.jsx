@@ -36,7 +36,7 @@ function Home() {
                         <img src={moment} alt="" className='rounded-top object-fit-cover' style={{width: '8rem', height: '10rem'}} />
 
                         <div className="w-100 position-absolute start-0 end-0 bottom-0 d-flex justify-content-center align-items-center m-0 p-1 bg-body bg-opacity-75">
-                          <button className="btn bg-custom-color bi bi-plus-square fs-3"></button>
+                          <button className="btn bg-custom-color bi bi-plus-circle fs-3"></button>
                         </div>
                       </div>
 

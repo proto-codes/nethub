@@ -1,27 +1,58 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import axios from '../api/axios';
+// import axios, { fetchCsrfToken } from '../api/axios';
 
 function Register() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [password_confirmation, setPasswordConfirmation] = useState('');
+    const [userData, setUserData] = useState({
+        name: '',
+        email: '',
+        password: '',
+        password_confirmation: ''
+    });
+    const [error, setError] = useState('');
     const navigate = useNavigate();
+
+    const handleInputChange = (e) => {
+        setUserData({ ...userData, [e.target.name]: e.target.value });
+    };
 
     const handleRegister = async (event) => {
         event.preventDefault();
         try {
-            await axios.post('/register', {name, email, password, password_confirmation});
-            setName('');
-            setEmail('');
-            setPassword('');
-            setPasswordConfirmation('');
-            navigate('/');
-        } catch (e) {
-            console.log(e);
+            // Fetch CSRF token before making the request
+            await fetchCsrfToken();
+
+            // Perform register
+            const response = await axios.post('/register', userData);
+
+            console.log('Register success', response.data);
+            setUserData({
+                name: '',
+                email: '',
+                password: '',
+                password_confirmation: ''
+            });
+
+            // Redirect to login page
+            navigate('/login');
+        } catch (error) {
+            if (error.response) {
+                // Handle specific error responses
+                console.error('Error Response Data:', error.response.data);
+                console.error('Error Response Status:', error.response.status);
+                setError('Registration failed. Please check your input and try again.');
+            } else if (error.request) {
+                // Handle no response
+                console.error('Error Request:', error.request);
+                setError('Network error. Please try again later.');
+            } else {
+                // Handle other errors
+                console.error('Error Message:', error.message);
+                setError('An unexpected error occurred. Please try again.');
+            }
         }
     };
+
     const handleGoBack = () => {
         navigate('/login', { replace: true });
     };
@@ -81,15 +112,15 @@ function Register() {
                                 
                                 <div className="form-floating mt-3">
                                     <input type="text" id='name' className='form-control' name="name" autoComplete='name' placeholder='Name' 
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)} />
+                                    value={userData.name}
+                                    onChange={handleInputChange} />
                                     <label htmlFor="name">Name</label>
                                 </div>
                                 
                                 <div className="form-floating mt-3">
                                     <input type="emal" id='email' className='form-control' name="email" autoComplete='email' placeholder='Email'
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)} />
+                                    value={userData.email}
+                                    onChange={handleInputChange} />
                                     <label htmlFor="email">Email</label>
                                 </div>
                                 {/* <span className="text-danger">Error</span> */}
@@ -110,18 +141,18 @@ function Register() {
                                 
                                 <div className="form-floating mt-3">
                                     <input type={PasswordVisible ? 'text' : 'password'} id='password' className='form-control' name="password" placeholder='Password' 
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)} />
+                                    value={userData.password}
+                                    onChange={handleInputChange} />
                                     <label htmlFor="password">Password</label>
                                     <span onClick={handlePasswordVisibility} className="position-absolute end-0 top-50 translate-middle-y py-2 me-2 cursor-pointer button">{PasswordVisible ? 'Hide' : 'Show'}</span>
                                 </div>
                                 {/* <span className="text-danger">Error</span> */}
                                 
                                 <div className="form-floating mt-3">
-                                    <input type={PasswordConfirmationVisible ? 'text' : 'password'} id='confirm-password' className='form-control' name="confirm-password" placeholder='Confirm Password'
-                                    value={password_confirmation}
-                                    onChange={(e) => setPasswordConfirmation(e.target.value)} />
-                                    <label htmlFor="confirm-password">Confirm Password</label>
+                                    <input type={PasswordConfirmationVisible ? 'text' : 'password'} id='Password_confirmation' className='form-control' name="Password_confirmation" placeholder='Confirm Password'
+                                    value={userData.Password_confirmation}
+                                    onChange={handleInputChange} />
+                                    <label htmlFor="Password_confirmation">Confirm Password</label>
                                     <span onClick={handlePasswordConfirmationVisibility} className="position-absolute end-0 top-50 translate-middle-y py-2 me-2 cursor-pointer">{PasswordConfirmationVisible ? 'Hide' : 'Show'}</span>
                                 </div>
                                 {/* <span className="text-danger">Error</span> */}
@@ -132,6 +163,8 @@ function Register() {
                             <input type="checkbox" className="form-check-input" name="checkbox" id='checkbox' />
                             <label className="form-check-label" htmlFor="checkbox">I agree to the terms of service</label>
                         </div>
+
+                        {error && <p className="text-danger">{error}</p>}
 
                         <button type="submit" className="btn bg-custom-color shadow-sm">Register</button>
                     </form>

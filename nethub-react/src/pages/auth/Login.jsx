@@ -3,40 +3,37 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from '../api/axios';
 
 function Login() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    // const navigate = useNavigate();
+    const [userData, setUserData] = useState({
+        email: '',
+        password: '',
+    });
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
 
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
-    // const navigate = useNavigate();
+    const handleInputChange = (e) => {
+        setUserData({ ...userData, [e.target.name]: e.target.value });
+    };
     
-    // const handleLogin = async (event) => {
-    //     event.preventDefault();
-    //     try {
-    //         await axios.post('/login', {email, password});
-    //         setEmail('');
-    //         setPassword('');
-    //         navigate('/');
-    //     } catch (e) {
-    //         console.log(e);
-    //     }
-    // };
-    
-    const handleLogin = async () => {
+    const handleLogin = async (event) => {
+        event.preventDefault();
         try {
-          // Get the CSRF cookie
-          await axios.get('http://localhost:8000/sanctum/csrf-cookie');
-          
-          // Perform login
-          const response = await axios.post('http://localhost:8000/login', {
-            email: 'user@example.com',
-            password: 'password123'
-          });
-      
-          console.log(response.data);
+            // Perform login
+            const response = await axios.post('/login', userData);
+
+            // Store the token
+            localStorage.setItem('token', response.data.token);
+
+            console.log('Login successful');
+            setUserData({
+                email: '',
+                password: ''
+            });
+
+            // Redirect to home
+            navigate('/');
         } catch (error) {
-          console.error('Login error', error);
+            console.error('Login error', error);
+            setError('Invalid credentials. Please try again.');
         }
     };
 
@@ -65,20 +62,21 @@ function Login() {
                             <form onSubmit={handleLogin}>
                                 <div className="form-floating">
                                     <input type="email" id='email' className='form-control' placeholder='Username, Email, or Phone Number' name="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)} />
+                                    value={userData.email}
+                                    onChange={handleInputChange} />
                                     <label htmlFor="email">Username, Email, or Phone Number</label>
                                 </div>
                                 {/* <span className="text-danger">Error</span> */}
 
                                 <div className="form-floating mt-3">
-                                    <input type={isPasswordVisible ? 'text' : 'password'} id='password-auth' className='form-control' name="password-auth" placeholder='Password' 
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)} />
-                                    <label htmlFor="password-auth">Password</label>
+                                    <input type={isPasswordVisible ? 'text' : 'password'} id='password' className='form-control' name="password" placeholder='Password' 
+                                    value={userData.password}
+                                    onChange={handleInputChange} />
+                                    <label htmlFor="password">Password</label>
                                     <span onClick={handlePasswordVisibility} className="position-absolute end-0 top-50 translate-middle-y py-2 me-2 cursor-pointer button">{isPasswordVisible ? 'Hide' : 'Show'}</span>
                                 </div>
                                 {/* <span className="text-danger">Error</span> */}
+                                {error && <p className="text-danger">{error}</p>}
 
                                 <button type="submit" className="btn bg-custom-color d-block mt-3 mb-2 shadow-sm">Login</button>                       
                             </form>

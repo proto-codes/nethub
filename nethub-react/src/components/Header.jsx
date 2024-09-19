@@ -8,17 +8,17 @@ function Header() {
     <div>
         <header className='w-100 position-fixed top-0 start-0 end-0 d-flex align-items-center justify-content-between border-bottom bg-body d-sm-none z-1' style={{height: '3.5rem'}}>
             <div>
-                <a href="/" title="Logo" className='fs-1 ms-2 text-body text-decoration-none'>Nethub</a>
+                <a href="/" title="Logo" className='h1 ms-2 text-body text-decoration-none'>Nethub</a>
             </div>
             <ul className="nav nav-pills">
                 <li title="Search" className='nav-item'>
                     <Link to='/search' className='nav-link text-body'>
-                    <i className="bi bi-search fs-1"></i>
+                    <i className="bi bi-search fs-4"></i>
                     </Link>
                 </li>
                 <li title="Create" className='nav-item'>
                     <Link to='#' className='nav-link text-body' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
-                    <i className="bi bi-plus-square fs-1"></i>
+                    <i className="bi bi-plus-circle fs-4"></i>
                     </Link>
                     <ul className="dropdown-menu">
                         <li><a href="#" className="dropdown-item fs-5"><i className="bi bi-pencil-square"></i> Post</a></li>
@@ -28,7 +28,7 @@ function Header() {
                 </li>                
                 <li title="Messages" className='nav-item'>
                     <Link to='/messages' className='nav-link text-body'>
-                    <i className="bi bi-envelope fs-1"></i>
+                    <i className="bi bi-envelope fs-4"></i>
                     </Link>
                 </li>
             </ul>
